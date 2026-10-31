@@ -25,7 +25,7 @@ from openpyxl.utils import get_column_letter, column_index_from_string
 from openpyxl.utils.cell import coordinate_from_string
 from openpyxl.worksheet.pagebreak import Break, RowBreak
 
-TPL_DIR = os.path.join(os.path.dirname(__file__), "..", "templates")
+TPL_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "templates"))
 TEMPLATE = os.path.join(TPL_DIR, "quotation_template.xlsx")
 META = json.load(open(os.path.join(TPL_DIR, "template_meta.json")))
 QS, DS = "5. Quotation", "Disclaimers"
@@ -371,7 +371,7 @@ def build_quotation_workbook(doc: dict, result: dict, out_path: str) -> dict:
     return {"body_rows": len(body), "breaks": breaks, "last_row": last, "totals_row": tot_row}
 
 
-FONTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "fonts"))
+FONTS_DIR = os.environ.get("PROLOG_FONTS_DIR") or os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "fonts"))
 
 
 def _font_env(tmp: str) -> dict:
@@ -398,6 +398,11 @@ def has_font(name: str) -> bool:
 def xlsx_to_pdf(xlsx_path: str, out_dir: str, pdf_font_fix: bool = True) -> str:
     """Render with LibreOffice. Footer font Angsana New is not available on Linux, so a print copy uses a
     metric substitute (the .xlsx delivered to customers keeps the original footer font)."""
+    from ..platform_tools import excel_available, excel_export_pdf, require_soffice
+    dst = os.path.join(out_dir, os.path.splitext(os.path.basename(xlsx_path))[0] + ".pdf")
+    if excel_available():
+        excel_export_pdf(xlsx_path, dst)   # Windows + Excel: same renderer and fonts as the original
+        return dst
     tmp = tempfile.mkdtemp(prefix="pdf_")
     try:
         src = os.path.join(tmp, os.path.basename(xlsx_path))
@@ -418,10 +423,9 @@ def xlsx_to_pdf(xlsx_path: str, out_dir: str, pdf_font_fix: bool = True) -> str:
         else:
             shutil.copy(xlsx_path, src)
         env = _font_env(tmp)
-        subprocess.run(["soffice", "--headless", "--norestore", "--convert-to", "pdf", "--outdir", tmp, src],
+        subprocess.run([require_soffice(), "--headless", "--norestore", "--convert-to", "pdf", "--outdir", tmp, src],
                        check=True, capture_output=True, timeout=180, env=env)
         pdf = os.path.splitext(src)[0] + ".pdf"
-        dst = os.path.join(out_dir, os.path.splitext(os.path.basename(xlsx_path))[0] + ".pdf")
         shutil.move(pdf, dst)
         return dst
     finally:

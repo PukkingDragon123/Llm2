@@ -24,6 +24,12 @@ function AiSettings() {
   const [model, setModel] = useState('')
   const [err, setErr] = useState<unknown>(null)
   const [busy, setBusy] = useState(false)
+  const [test, setTest] = useState<{ ok: boolean; model?: string; reply?: string; seconds?: number; error?: string } | null>(null)
+  async function runTest() {
+    setBusy(true); setTest(null); setErr(null)
+    try { setTest(await api.post<{ ok: boolean; model?: string; reply?: string; seconds?: number; error?: string }>('/api/settings/ai/test', {})) }
+    catch (e) { setErr(e) } finally { setBusy(false) }
+  }
   useEffect(() => { api.get<AiStatus>('/api/settings/ai').then((s) => { setSt(s); setModel(s.model) }).catch(setErr) }, [])
   async function save(body: { api_key?: string; model?: string }) {
     setBusy(true)
@@ -45,9 +51,14 @@ function AiSettings() {
       </div>
       <div className="btn-row" style={{ marginTop: 10 }}>
         <button className="btn primary" disabled={busy || (!key && model === st?.model)} onClick={() => void save({ ...(key ? { api_key: key } : {}), model })} data-testid="save-ai">Save</button>
+        <button className="btn" disabled={busy || !st?.configured} onClick={() => void runTest()} data-testid="test-ai">Test connection</button>
         {st?.source === 'settings' && <button className="btn danger" disabled={busy} onClick={() => void save({ api_key: '' })}>Remove stored key</button>}
         {st?.source === 'env' && <span className="muted small">The key comes from the server’s ANTHROPIC_API_KEY environment variable.</span>}
       </div>
+      {test && (test.ok
+        ? <p className="small" style={{ marginTop: 8 }}><Badge tone="green">connected</Badge> {test.model} answered “{test.reply}” in {test.seconds}s</p>
+        : <p className="small" style={{ marginTop: 8 }}><Badge tone="amber">failed</Badge> {test.error}</p>)}
+      <p className="muted small" style={{ marginTop: 8 }}>Get a key at console.anthropic.com → API Keys. If your account cannot use the selected model, the app automatically falls back to Claude Sonnet / Haiku.</p>
     </Card>
   )
 }

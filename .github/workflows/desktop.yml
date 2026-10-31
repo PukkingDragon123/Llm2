@@ -1,0 +1,76 @@
+name: Desktop app
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-22.04]
+    runs-on: ${{ matrix.os }}
+    env:
+      APP_VERSION: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || format('0.0.{0}', github.run_number) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Build frontend
+        run: cd frontend && npm ci && npm run build
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt -r desktop/requirements.txt
+      - name: Linux webview deps
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libreoffice-calc-nogui poppler-utils && pip install "pywebview[qt]"
+      - name: Install LibreOffice (macOS)
+        if: runner.os == 'macOS'
+        run: brew install --cask libreoffice
+      - name: Install LibreOffice (Windows)
+        if: runner.os == 'Windows'
+        run: choco install libreoffice-fresh -y --no-progress
+      - name: Backend tests
+        if: runner.os == 'Linux'
+        run: cd backend && python -m pytest -q
+      - name: PyInstaller
+        run: pyinstaller --noconfirm --distpath dist --workpath build desktop/prolog_estimator.spec
+      - name: Smoke test packaged app
+        shell: bash
+        run: |
+          EXE=dist/PrologEstimator/PrologEstimator
+          [ -f "$EXE.exe" ] && EXE="$EXE.exe"
+          PROLOG_DATA_DIR="$RUNNER_TEMP/smoke" "$EXE" --smoke-test
+      - name: Windows installer
+        if: runner.os == 'Windows'
+        run: |
+          choco install innosetup -y --no-progress
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" desktop\installer.iss
+          Copy-Item desktop\Output\*.exe .
+      - name: Package archive
+        shell: bash
+        run: |
+          cd dist
+          if [ "$RUNNER_OS" = "Windows" ]; then 7z a ../PrologEstimator-windows-$APP_VERSION.zip PrologEstimator >/dev/null;
+          else tar czf ../PrologEstimator-$(echo $RUNNER_OS | tr A-Z a-z)-$APP_VERSION.tar.gz PrologEstimator; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PrologEstimator-${{ runner.os }}
+          path: |
+            PrologEstimator-*.zip
+            PrologEstimator-*.tar.gz
+            PrologEstimator-Setup-*.exe
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            PrologEstimator-*.zip
+            PrologEstimator-*.tar.gz
+            PrologEstimator-Setup-*.exe

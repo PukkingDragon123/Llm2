@@ -9,3 +9,4 @@ xlrd
 pymupdf
 pytest
 httpx
+pillow

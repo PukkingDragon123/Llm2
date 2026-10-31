@@ -413,7 +413,8 @@ def verify_with_libreoffice(xlsx_path: str, cells: dict, result: dict, tol: floa
         shutil.copy(xlsx_path, src)
         outdir = os.path.join(tmp, "out")
         os.makedirs(outdir)
-        subprocess.run(["soffice", "--headless", "--norestore", "--convert-to", "xlsx:Calc MS Excel 2007 XML",
+        from ..platform_tools import require_soffice
+        subprocess.run([require_soffice(), "--headless", "--norestore", "--convert-to", "xlsx:Calc MS Excel 2007 XML",
                         "--outdir", outdir, src], check=True, capture_output=True, timeout=180, env=dict(os.environ, HOME=tmp))
         wb = openpyxl.load_workbook(os.path.join(outdir, "in.xlsx"), data_only=True)
         nodes = result["nodes"]

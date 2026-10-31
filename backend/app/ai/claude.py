@@ -75,25 +75,68 @@ def model() -> str:
     return _config().get("model") or DEFAULT_MODEL
 
 
+_FALLBACK_OK = {"claude-opus-5-5", "claude-fable-5-1", "claude-opus-5", "claude-sonnet-5-5"}
+
+
+def _model_chain() -> list[str]:
+    chain = [model(), "claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"]
+    return list(dict.fromkeys(chain))
+
+
+def test_connection() -> dict:
+    """Small real request to confirm the key, network and model access."""
+    import time
+    import anthropic
+    c = client()
+    errors = []
+    for m in _model_chain():
+        t = time.time()
+        try:
+            r = c.messages.create(model=m, max_tokens=64, output_config={"effort": "low"},
+                                  messages=[{"role": "user", "content": "Reply with the single word OK."}])
+            text = "".join(getattr(b, "text", "") for b in r.content)
+            return {"ok": True, "model": r.model, "reply": text.strip()[:40], "seconds": round(time.time() - t, 2),
+                    "skipped_models": errors}
+        except anthropic.AuthenticationError as e:
+            raise AIUnavailable("Claude API key was rejected") from e
+        except (anthropic.NotFoundError, anthropic.PermissionDeniedError, anthropic.BadRequestError) as e:
+            errors.append(f"{m}: {e.__class__.__name__}")
+        except anthropic.APIConnectionError as e:
+            return {"ok": False, "error": "Could not reach api.anthropic.com (internet / proxy / firewall)"}
+    return {"ok": False, "error": "No model available for this key", "skipped_models": errors}
+
+
 def _parse(system: str, content: list, schema, effort: str = "high", max_tokens: int = 16000):
     """Structured-output call with adaptive thinking and server-side refusal fallback."""
     import anthropic
     c = client()
-    try:
-        resp = c.beta.messages.parse(
-            model=model(), max_tokens=max_tokens,
-            system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
-            messages=[{"role": "user", "content": content}],
-            thinking={"type": "adaptive"}, output_config={"effort": effort},
-            output_format=schema,
-            betas=["server-side-fallback-2026-07-01"], fallbacks="default",
-        )
-    except anthropic.AuthenticationError as e:
-        raise AIUnavailable("Claude API key was rejected") from e
-    except anthropic.RateLimitError as e:
-        raise RuntimeError("Claude rate limit reached; retry shortly") from e
-    except anthropic.APIConnectionError as e:
-        raise RuntimeError("Could not reach the Claude API") from e
+    resp, last_err = None, None
+    for m in _model_chain():
+        try:
+            kw = dict(model=m, max_tokens=max_tokens,
+                      system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
+                      messages=[{"role": "user", "content": content}],
+                      thinking={"type": "adaptive"}, output_config={"effort": effort}, output_format=schema)
+            if m in _FALLBACK_OK:
+                kw.update(betas=["server-side-fallback-2026-07-01"], fallbacks="default")
+            resp = c.beta.messages.parse(**kw)
+            break
+        except anthropic.AuthenticationError as e:
+            raise AIUnavailable("Claude API key was rejected") from e
+        except (anthropic.NotFoundError, anthropic.PermissionDeniedError) as e:
+            last_err = e          # model not available for this key -> try the next model
+            continue
+        except anthropic.BadRequestError as e:
+            if "model" in str(e).lower() or "fallback" in str(e).lower():
+                last_err = e
+                continue
+            raise RuntimeError(f"Claude rejected the request: {e}") from e
+        except anthropic.RateLimitError as e:
+            raise RuntimeError("Claude rate limit reached; retry shortly") from e
+        except anthropic.APIConnectionError as e:
+            raise RuntimeError("Could not reach the Claude API (check internet / proxy)") from e
+    if resp is None:
+        raise AIUnavailable(f"No Claude model available for this API key ({last_err})")
     if getattr(resp, "stop_reason", None) == "refusal":
         raise RuntimeError("Claude declined this request")
     if getattr(resp, "stop_reason", None) == "max_tokens":

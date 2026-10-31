@@ -26,9 +26,13 @@ def to_xlsx(path: str) -> tuple[str, str | None]:
     tmp = tempfile.mkdtemp(prefix="imp_")
     src = os.path.join(tmp, "src" + os.path.splitext(path)[1].lower())
     shutil.copy(path, src)
-    subprocess.run(["soffice", "--headless", "--convert-to", "xlsx", "--outdir", tmp, src],
-                   check=True, capture_output=True, timeout=300)
     out = os.path.join(tmp, "src.xlsx")
+    from .platform_tools import excel_available, excel_convert, require_soffice
+    if excel_available():
+        excel_convert(src, out)          # Excel evaluates XLOOKUP: cached values are complete
+        return out, tmp
+    subprocess.run([require_soffice(), "--headless", "--convert-to", "xlsx", "--outdir", tmp, src],
+                   check=True, capture_output=True, timeout=300, env=dict(os.environ, HOME=tmp))
     if not os.path.exists(out):
         raise RuntimeError("LibreOffice conversion failed")
     return out, tmp

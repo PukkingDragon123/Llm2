@@ -106,7 +106,9 @@ def _ddict(d: Drawing) -> dict:
 # =============================================================== settings / AI status
 @app.get("/api/health")
 def health():
-    return {"ok": True, "ai": claude.status(), "soffice": shutil.which("soffice") is not None}
+    from .platform_tools import status as pstatus
+    ps = pstatus()
+    return {"ok": True, "ai": claude.status(), "soffice": bool(ps["soffice"]), "excel": ps["excel"], "platform": ps["platform"]}
 
 
 @app.get("/api/settings/factory")
@@ -130,6 +132,11 @@ class AIConfig(BaseModel):
 @app.get("/api/settings/ai")
 def get_ai():
     return claude.status()
+
+
+@app.post("/api/settings/ai/test")
+def test_ai():
+    return claude.test_connection()
 
 
 @app.put("/api/settings/ai")
@@ -813,7 +820,7 @@ def dashboard(db: Session = Depends(get_db)):
 
 
 # =============================================================== static frontend
-DIST = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist"))
+DIST = os.environ.get("PROLOG_FRONTEND_DIST") or os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist"))
 if os.path.isdir(DIST):
     app.mount("/assets", StaticFiles(directory=os.path.join(DIST, "assets")), name="assets")
 
