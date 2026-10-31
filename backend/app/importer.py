@@ -80,7 +80,10 @@ def _runs(cell_value, cell) -> list[dict]:
             else:
                 out.append({**base, "text": str(part)})
         return [r for r in out if r["text"] != ""]
-    return [{**base, "text": _s(cell_value)}] if _s(cell_value) != "" else []
+    if cell_value is None:
+        return []
+    txt = cell_value if isinstance(cell_value, str) else _s(cell_value)
+    return [{**base, "text": txt}] if txt.strip() != "" else []
 
 
 def _parse_freight_formula(formula: str | None, cached) -> list[dict]:
@@ -479,6 +482,8 @@ def _import(xlsx: str, filename: str) -> dict:
             else:
                 kind = "line"
             row = {"kind": kind, "runs": runs}
+            al = wsq[f"B{r}"].alignment
+            row["align"] = {"vertical": al.vertical, "wrap": bool(al.wrap_text), "horizontal": al.horizontal}
             if kind == "item":
                 row["item_no"] = int(no)
             if h and h > 15.5:

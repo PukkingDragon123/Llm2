@@ -222,7 +222,8 @@ def build_quotation_workbook(doc: dict, result: dict, out_path: str) -> dict:
     for coord, key in (("U9", "enquiry_date"), ("U10", "quotation_date"), ("U11", "validity_date")):
         d = _to_date(doc.get(key))
         ws[coord].value = d if d else (doc.get(key) or "-")
-        ws[coord].number_format = "d-mmm-yy"
+        if '"B1"' in ws[coord].number_format or "mmm" not in ws[coord].number_format:
+            ws[coord].number_format = "[$-409]d\\-mmm\\-yy;@"   # original's format (B1 prefix = xls conversion artifact)
     setv("U12", doc.get("payment_term") or "-")
     ws["U13"].value = doc.get("delivery_time")
     setv("X13", doc.get("delivery_unit") or "Months")
@@ -258,14 +259,27 @@ def build_quotation_workbook(doc: dict, result: dict, out_path: str) -> dict:
         _apply_row(ws, r, proto)
         base_font = proto["cells"][2]["font"]
         runs = row.get("runs") or []
-        val = _rich(runs, base_font)
-        ws.cell(r, 2).value = val
+        cellB = ws.cell(r, 2)
+        if len(runs) == 1:
+            r0 = runs[0]
+            col = r0.get("color")
+            cellB.font = Font(name=base_font.name, sz=base_font.sz, b=bool(r0.get("bold")), i=bool(r0.get("italic")),
+                              u="single" if r0.get("underline") else None,
+                              color=(("FF" + col) if col and len(col) == 6 else col) or base_font.color)
+            cellB.value = r0.get("text", "")
+        else:
+            cellB.value = _rich(runs, base_font)
+        if row.get("align"):
+            a = row["align"]
+            cellB.alignment = Alignment(horizontal=a.get("horizontal") or cellB.alignment.horizontal,
+                                        vertical=a.get("vertical"), wrap_text=a.get("wrap") or None)
         if kind in ("line", "text", "bullet_line", "highlight_line") or row.get("height"):
             h = _row_height_for(runs, kind, row.get("height"), width_pt, base_font.sz or 8)
             if h:
                 ws.row_dimensions[r].height = h
-                ws.cell(r, 2).alignment = Alignment(
-                    wrap_text=True, vertical="center", horizontal=proto["cells"][2]["alignment"].horizontal)
+                if not row.get("align"):
+                    ws.cell(r, 2).alignment = Alignment(
+                        wrap_text=True, vertical="center", horizontal=proto["cells"][2]["alignment"].horizontal)
         if kind == "title":
             hp = (result.get("totals") or {}).get("header_price")
             t = doc.get("title") or {}
@@ -357,12 +371,38 @@ def build_quotation_workbook(doc: dict, result: dict, out_path: str) -> dict:
     return {"body_rows": len(body), "breaks": breaks, "last_row": last, "totals_row": tot_row}
 
 
+FONTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "fonts"))
+
+
+def _font_env(tmp: str) -> dict:
+    env = dict(os.environ, HOME=tmp)
+    if os.path.isdir(FONTS_DIR) and any(f.lower().endswith((".ttf", ".ttc", ".otf")) for f in os.listdir(FONTS_DIR)):
+        conf = os.path.join(tmp, "fonts.conf")
+        with open(conf, "w") as f:
+            f.write(f'<?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd"><fontconfig>'
+                    f'<include ignore_missing="yes">/etc/fonts/fonts.conf</include><dir>{FONTS_DIR}</dir>'
+                    f'<cachedir>{tmp}/fc-cache</cachedir></fontconfig>')
+        env["FONTCONFIG_FILE"] = conf
+    return env
+
+
+def has_font(name: str) -> bool:
+    try:
+        out = subprocess.run(["fc-list", ":family"], capture_output=True, text=True, timeout=20,
+                             env=_font_env(tempfile.mkdtemp(prefix="fc_"))).stdout
+        return name.lower() in out.lower()
+    except Exception:
+        return False
+
+
 def xlsx_to_pdf(xlsx_path: str, out_dir: str, pdf_font_fix: bool = True) -> str:
     """Render with LibreOffice. Footer font Angsana New is not available on Linux, so a print copy uses a
     metric substitute (the .xlsx delivered to customers keeps the original footer font)."""
     tmp = tempfile.mkdtemp(prefix="pdf_")
     try:
         src = os.path.join(tmp, os.path.basename(xlsx_path))
+        if pdf_font_fix and has_font("Angsana New"):
+            pdf_font_fix = False      # real footer font installed: render exactly like the original
         if pdf_font_fix:
             wb = openpyxl.load_workbook(xlsx_path, rich_text=True)
             for ws in wb.worksheets:
@@ -377,7 +417,7 @@ def xlsx_to_pdf(xlsx_path: str, out_dir: str, pdf_font_fix: bool = True) -> str:
             wb.save(src)
         else:
             shutil.copy(xlsx_path, src)
-        env = dict(os.environ, HOME=tmp)
+        env = _font_env(tmp)
         subprocess.run(["soffice", "--headless", "--norestore", "--convert-to", "pdf", "--outdir", tmp, src],
                        check=True, capture_output=True, timeout=180, env=env)
         pdf = os.path.splitext(src)[0] + ".pdf"

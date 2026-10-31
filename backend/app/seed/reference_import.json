@@ -3270,6 +3270,11 @@
       "text": "Main Part. : Titanium."
      }
     ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    },
     "item_no": 1
    },
    {
@@ -3280,57 +3285,82 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Shell. : ASTM B265 Gr.2 : Size. Thk 6 mm.  ;  Q'ty = 1 Set."
-     }
-    ]
-   },
-   {
-    "kind": "line",
-    "runs": [
-     {
-      "bold": false,
-      "italic": false,
-      "underline": false,
-      "color": null,
-      "text": "- Elliptical Head. : ASTM B265 Gr.2 : Min. Thk 5 mm. ( After Forming )  ;  Q'ty = 1 Set."
-     }
-    ]
-   },
-   {
-    "kind": "line",
-    "runs": [
-     {
-      "bold": false,
-      "italic": false,
-      "underline": false,
-      "color": null,
-      "text": "- Elliptical Bottom. : ASTM B265 Gr.2 : Min. Thk 6.5 mm. ( After Forming )  ;  Q'ty = 1 Set."
-     }
-    ]
-   },
-   {
-    "kind": "line",
-    "runs": [
-     {
-      "bold": false,
-      "italic": false,
-      "underline": false,
-      "color": null,
-      "text": "- Nozzle & Manhole.  : ASTM B265 / B862 Gr.2 : Size. Thk. 3 , 4 , 6 mm.  ;  Q'ty = 1 Lot."
-     }
-    ]
-   },
-   {
-    "kind": "line",
-    "runs": [
-     {
-      "bold": false,
-      "italic": false,
-      "underline": false,
-      "color": null,
-      "text": "- Stub End Ring. / Lining Surface for Manhole. / Pad Nozzle. : ASTM B265 Gr.2 : Size. Thk 4 , 5 , 6 mm.  ;  Q'ty = 1 Lot."
+      "text": " - Shell. : ASTM B265 Gr.2 : Size. Thk 6 mm.  ;  Q'ty = 1 Set."
      }
     ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": " - Elliptical Head. : ASTM B265 Gr.2 : Min. Thk 5 mm. ( After Forming )  ;  Q'ty = 1 Set."
+     }
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": " - Elliptical Bottom. : ASTM B265 Gr.2 : Min. Thk 6.5 mm. ( After Forming )  ;  Q'ty = 1 Set."
+     }
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": " - Nozzle & Manhole.  : ASTM B265 / B862 Gr.2 : Size. Thk. 3 , 4 , 6 mm.  ;  Q'ty = 1 Lot."
+     }
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": " - Stub End Ring. / Lining Surface for Manhole. / Pad Nozzle. : ASTM B265 Gr.2 : Size. Thk 4 , 5 , 6 mm.  ;  Q'ty = 1 Lot."
+     }
+    ],
+    "align": {
+     "vertical": "center",
+     "wrap": true,
+     "horizontal": "left"
+    },
     "height": 27.0
    },
    {
@@ -3358,6 +3388,11 @@
       "color": null
      }
     ],
+    "align": {
+     "vertical": "center",
+     "wrap": true,
+     "horizontal": "left"
+    },
     "height": 27.0
    },
    {
@@ -3385,11 +3420,21 @@
       "color": null
      }
     ],
+    "align": {
+     "vertical": "center",
+     "wrap": true,
+     "horizontal": "left"
+    },
     "height": 27.0
    },
    {
     "kind": "blank",
-    "runs": []
+    "runs": [],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "item",
@@ -3399,9 +3444,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "Other Accessories."
+      "text": " Other Accessories."
      }
     ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    },
     "item_no": 2
    },
    {
@@ -3429,6 +3479,11 @@
       "color": null
      }
     ],
+    "align": {
+     "vertical": "center",
+     "wrap": true,
+     "horizontal": "left"
+    },
     "height": 30.0
    },
    {
@@ -3439,9 +3494,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Loose Flange A105 (HDG.) : LJ-FF & BL-FF : Size. JIS10K  ;  Q'ty = 1 Lot."
+      "text": " - Loose Flange A105 (HDG.) : LJ-FF & BL-FF : Size. JIS10K  ;  Q'ty = 1 Lot."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3451,9 +3511,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Flange for Hydrostatic Test. & Transportation. : Carbon Steel./SUS304(1.5t) ;  Q'ty = 1 Lot."
+      "text": " - Flange for Hydrostatic Test. & Transportation. : Carbon Steel./SUS304(1.5t) ;  Q'ty = 1 Lot."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3463,9 +3528,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Gasket for Service.  : PTFE  : Thickness 4 mm  ;  Q'ty = 1 Lot."
+      "text": " - Gasket for Service.  : PTFE  : Thickness 4 mm  ;  Q'ty = 1 Lot."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3475,9 +3545,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Gasket for Hydrostatic Test ( NBR / Neoprene )  ;  Q'ty = 1 Lot."
+      "text": " - Gasket for Hydrostatic Test ( NBR / Neoprene )  ;  Q'ty = 1 Lot."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3487,13 +3562,23 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Bolt and Nut : CS (HDG)  for Blind Flange and Shell.  ;  Q'ty = 1 Lot."
+      "text": " - Bolt and Nut : CS (HDG)  for Blind Flange and Shell.  ;  Q'ty = 1 Lot."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "blank",
-    "runs": []
+    "runs": [],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "item",
@@ -3506,6 +3591,11 @@
       "text": "Labor cost"
      }
     ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    },
     "item_no": 3
    },
    {
@@ -3518,7 +3608,12 @@
       "color": null,
       "text": "• Assembly & Fabrication"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3528,9 +3623,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Fit-Up and Welding (Shop)"
+      "text": "    - Fit-Up and Welding (Shop)"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "bullet",
@@ -3540,9 +3640,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "• Surface Finishing"
+      "text": "• Surface Finishing "
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3552,9 +3657,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "-  Polishing for Parts Titanium"
+      "text": "    -  Polishing for Parts Titanium"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3564,9 +3674,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "-  Painting for Parts Carbon Steel"
+      "text": "    -  Painting for Parts Carbon Steel"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "bullet",
@@ -3576,9 +3691,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "• Non Destructive Test"
+      "text": "• Non Destructive Test "
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3588,9 +3708,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- PT 100%"
+      "text": "    - PT 100%"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3600,9 +3725,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- RT Test 100% (Shop)"
+      "text": "    - RT Test 100% (Shop)"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3612,9 +3742,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Hydrostatic Test. (2.85 kg/cm²G.)"
+      "text": "    - Hydrostatic Test. (2.85 kg/cm²G.)"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3624,9 +3759,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "-  Pad Leak Test. (2 kg/cm²G.)"
+      "text": "    -  Pad Leak Test. (2 kg/cm²G.)"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "bullet",
@@ -3636,9 +3776,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "• Engineering & QC Document"
+      "text": "• Engineering & QC Document "
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3648,9 +3793,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Drawing"
+      "text": "    - Drawing"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3660,9 +3810,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Review WPS/PQR/WPQ"
+      "text": "    - Review WPS/PQR/WPQ"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3672,13 +3827,23 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Quality Report"
+      "text": "    - Quality Report"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "blank",
-    "runs": []
+    "runs": [],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "item",
@@ -3691,11 +3856,21 @@
       "text": "JTEPA"
      }
     ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    },
     "item_no": 4
    },
    {
     "kind": "blank",
-    "runs": []
+    "runs": [],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "highlight_head",
@@ -3714,7 +3889,12 @@
       "underline": true,
       "color": "FFFF0000"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "highlight_line",
@@ -3724,9 +3904,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "-  Total weight for Transport :  ~ 6,200 Kg"
+      "text": "    -  Total weight for Transport :  ~ 6,200 Kg "
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "highlight_line",
@@ -3736,13 +3921,23 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "-  Packing size for Transport : W.3.5 m x H.4.0 m x L.8.5 m"
+      "text": "    -  Packing size for Transport : W.3.5 m x H.4.0 m x L.8.5 m"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "blank",
-    "runs": []
+    "runs": [],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "section_head",
@@ -3754,7 +3949,12 @@
       "color": null,
       "text": "Remark :"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3764,57 +3964,82 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Design Code From ASME VIII Div.01"
-     }
-    ]
-   },
-   {
-    "kind": "line",
-    "runs": [
-     {
-      "bold": false,
-      "italic": false,
-      "underline": false,
-      "color": null,
-      "text": "- Design By Compress Program"
-     }
-    ]
-   },
-   {
-    "kind": "line",
-    "runs": [
-     {
-      "bold": false,
-      "italic": false,
-      "underline": false,
-      "color": null,
-      "text": "- Material Titanium Origin : China ( BAOTI & SINCEMAT )"
-     }
-    ]
-   },
-   {
-    "kind": "line",
-    "runs": [
-     {
-      "bold": false,
-      "italic": false,
-      "underline": false,
-      "color": null,
-      "text": "- Other Material Origin : Non India."
-     }
-    ]
-   },
-   {
-    "kind": "line",
-    "runs": [
-     {
-      "bold": false,
-      "italic": false,
-      "underline": false,
-      "color": null,
-      "text": "- For Shell which has Thickness 6 mm., We Design by Using load for Nozzle Size 16” and 12” and Take Only 60% from Load for Nozzle Standard Design."
+      "text": " - Design Code From ASME VIII Div.01"
      }
     ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": " - Design By Compress Program"
+     }
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": " - Material Titanium Origin : China ( BAOTI & SINCEMAT )"
+     }
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": " - Other Material Origin : Non India."
+     }
+    ],
+    "align": {
+     "vertical": "center",
+     "wrap": true,
+     "horizontal": "left"
+    }
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": " - For Shell which has Thickness 6 mm., We Design by Using load for Nozzle Size 16” and 12” and Take Only 60% from Load for Nozzle Standard Design."
+     }
+    ],
+    "align": {
+     "vertical": "center",
+     "wrap": true,
+     "horizontal": "left"
+    },
     "height": 30.0
    },
    {
@@ -3825,9 +4050,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Cancel. One Nozzle : 6B Size 6\" JIS10K"
+      "text": " - Cancel. One Nozzle : 6B Size 6\" JIS10K"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "center",
+     "wrap": true,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3837,9 +4067,14 @@
       "italic": false,
       "underline": false,
       "color": null,
-      "text": "- Add. One Nozzle : 16B Size 16\" JIS10K"
+      "text": " - Add. One Nozzle : 16B Size 16\" JIS10K"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "center",
+     "wrap": true,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3849,13 +4084,23 @@
       "italic": false,
       "underline": false,
       "color": "FFFF0000",
-      "text": "- The 10% discount case with validity until 26th October 2026."
+      "text": " - The 10% discount case with validity until 26th October 2026."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "blank",
-    "runs": []
+    "runs": [],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "section_head",
@@ -3867,7 +4112,12 @@
       "color": null,
       "text": "Term of Payment."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3879,7 +4129,12 @@
       "color": null,
       "text": "1. 30% : Down Payment with 30% of Refund bond"
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3891,7 +4146,12 @@
       "color": null,
       "text": "2. 40% : Main Material Receipt without bond."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "line",
@@ -3903,11 +4163,21 @@
       "color": null,
       "text": "3. 30% : Delivery with 10% of Performance bond."
      }
-    ]
+    ],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    },
    {
     "kind": "blank",
-    "runs": []
+    "runs": [],
+    "align": {
+     "vertical": "bottom",
+     "wrap": false,
+     "horizontal": "left"
+    }
    }
   ],
   "page_breaks": [
@@ -4592,8 +4862,6 @@
   }
  ],
  "notes": [
-  "Service 'QC Testing4' (CES F160) could not be resolved; amount left blank",
-  "Service 'QC Testing5' (CES F161) could not be resolved; amount left blank",
   "Domectric Price row 9 'Lap joint Flange FF (HUB) 20\" JIS10K' has qty 1 but no price in workbook (not imported)",
   "Domectric Price row 10 'Blind  Flange FF 20\" JIS10K' has qty 1 but no price in workbook (not imported)",
   "Domectric Price row 11 'Lap joint Flange FF (HUB) 16\" JIS10K' has qty 1 but no price in workbook (not imported)",
