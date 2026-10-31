@@ -317,8 +317,8 @@ def build_costing_workbook(est: dict, result: dict, project: dict, out_path: str
     wsum = wb.create_sheet("Summary", 0)
     wsum["A1"] = f"{project.get('product_subject','')} — {project.get('quotation_no','')}"
     wsum["A1"].font = Font(bold=True, size=13)
-    _hdr(wsum, 3, ["Item", "Heading", "Cost base", "Markup", "Calculated price", "Override", "Unit price", "Qty", "Total", "Margin %"],
-         [6, 34, 14, 8, 16, 12, 14, 7, 14, 9])
+    _hdr(wsum, 3, ["Item", "Heading", "Cost base", "Markup", "Calculated price", "Override", "Unit price", "Qty", "Total", "Margin %",
+                   "Adjustments"], [6, 34, 14, 8, 16, 12, 14, 7, 14, 9, 40])
     r = 4
     first_item = r
     dm, dl1, dl2 = [], [], []
@@ -341,7 +341,16 @@ def build_costing_workbook(est: dict, result: dict, project: dict, out_path: str
                 amt = src.get("amount")
                 terms.append(conv(str(amt), src.get("currency", qcur)))
         wsum.cell(r, 1, it["no"]); wsum.cell(r, 2, it["heading"])
-        wsum.cell(r, 3, "=" + ("+".join(terms) or "0"))
+        adj = [a for a in (b.get("adjustments") or []) if a.get("pct") not in (None, "")]
+        fac = "".join(f"*(1+{eval_expr(a['pct'])})" for a in adj)
+        if fac:
+            # re-tag the source terms of this item with the adjustment factor
+            for lst in (dm, dl1, dl2):
+                for k, tv in enumerate(lst):
+                    if tv in terms and not tv.endswith(fac):
+                        lst[k] = f"({tv}){fac}"
+            wsum.cell(r, 11, "; ".join(f"{a.get('label','adj')} {eval_expr(a['pct']):+.2%} ({a.get('reason','')})" for a in adj))
+        wsum.cell(r, 3, "=(" + ("+".join(terms) or "0") + ")" + fac)
         wsum.cell(r, 4, "Yes" if it["markup"] else "No")
         wsum.cell(r, 5, f'=IF(D{r}="Yes",ROUNDUP(C{r}*(1+OVH+RISK)/DIVISOR,ITEM_DIGITS),ROUNDUP(C{r},ITEM_DIGITS))')
         if b.get("override_price") not in (None, ""):

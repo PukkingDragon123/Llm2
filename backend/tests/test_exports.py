@@ -11,7 +11,7 @@ from app.exports.quotation import build_quotation_workbook, xlsx_to_pdf
 
 HERE = os.path.dirname(__file__)
 ROOT = os.path.join(HERE, "..", "..")
-FIX = json.load(open(os.path.join(HERE, "fixtures", "reference_import.json")))
+FIX = json.load(open(os.path.join(HERE, "..", "app", "seed", "reference_import.json")))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from compare_pdf import compare  # noqa: E402
 
@@ -67,3 +67,15 @@ def test_costing_workbook_formulas_recalculate_to_engine_values(tmp_path):
     cells = build_costing_workbook(FIX["estimate"], r, FIX["project"], str(x))
     rep = verify_with_libreoffice(str(x), cells, r)
     assert rep["checked"] > 90 and rep["mismatches"] == []
+
+
+def test_costing_workbook_with_adjustments(tmp_path):
+    est = copy.deepcopy(FIX["estimate"])
+    est["buckets"][2]["adjustments"] = [{"label": "Historical labor calibration", "pct": 0.08,
+                                         "reason": "3 jobs actual/estimate", "source": "history"}]
+    r = compute(est)
+    assert r["items"][2]["unit_price"] > 68820
+    x = tmp_path / "c.xlsx"
+    cells = build_costing_workbook(est, r, FIX["project"], str(x))
+    rep = verify_with_libreoffice(str(x), cells, r)
+    assert rep["mismatches"] == []

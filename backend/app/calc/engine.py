@@ -510,14 +510,38 @@ def compute(estimate: dict) -> dict:
                 if sig in used_sources:
                     c.issue("warning", bk, f"Source {sig} is counted in more than one quote item")
                 used_sources.add(sig)
+                fct = 1.0
+                for a in (b.get("adjustments") or []):
+                    pv = eval_expr(a.get("pct")) if a.get("pct") not in (None, "") else None
+                    if pv is not None:
+                        fct *= (1 + pv)
                 if src.get("type") in ("price_sheet", "parts_material"):
-                    ces_dm += v; dm_keys.append(bk + ".base")
+                    ces_dm += v * fct; dm_keys.append(bk + ".base")
                 elif src.get("type") in ("services", "crews"):
-                    ces_dl1 += v; dl1_keys.append(bk + ".base")
+                    ces_dl1 += v * fct; dl1_keys.append(bk + ".base")
                 elif src.get("type") == "machines":
-                    ces_dl2 += v; dl2_keys.append(bk + ".base")
-        base_v = c.calc(bk + ".base", f"Item {b.get('no')} {b.get('heading','')}: cost base", sum(parts_),
-                        "SUM(sources)", " + ".join(exprs) or "0", keys, qcur)
+                    ces_dl2 += v * fct; dl2_keys.append(bk + ".base")
+        raw_base = sum(parts_)
+        adj_list = [a for a in (b.get("adjustments") or []) if a.get("pct") not in (None, "")]
+        if adj_list:
+            c.calc(bk + ".raw", f"Item {b.get('no')} {b.get('heading','')}: cost before adjustments", raw_base,
+                   "SUM(sources)", " + ".join(exprs) or "0", keys, qcur)
+            akeys, factor, aexpr = [bk + ".raw"], 1.0, []
+            for ai, a in enumerate(adj_list):
+                ak = f"{bk}.adj{ai}"
+                pct = c.inp(ak, f"Item {b.get('no')}: {a.get('label') or 'adjustment'}", a.get("pct"), "%",
+                            source=a.get("source") or a.get("reason") or "engineer")
+                if not a.get("reason"):
+                    c.issue("warning", f"buckets.{bi}.adjustments.{ai}", "Adjustment without a stated reason",
+                            "State why this adjustment is applied")
+                factor *= (1 + pct)
+                aexpr.append(f"(1 + {fmt(pct)})")
+                akeys.append(ak)
+            base_v = c.calc(bk + ".base", f"Item {b.get('no')} {b.get('heading','')}: cost base", raw_base * factor,
+                            "cost x PRODUCT(1 + adjustment)", f"{fmt(raw_base)} x " + " x ".join(aexpr), akeys, qcur)
+        else:
+            base_v = c.calc(bk + ".base", f"Item {b.get('no')} {b.get('heading','')}: cost base", raw_base,
+                            "SUM(sources)", " + ".join(exprs) or "0", keys, qcur)
         markup = b.get("markup", True)
         qty = c.inp(bk + ".qty", f"Item {b.get('no')}: quantity", b.get("qty", 1), b.get("unit", ""), default=1.0)
         if markup:

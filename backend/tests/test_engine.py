@@ -10,7 +10,7 @@ from app.calc.numeric import roundup, eval_expr
 
 HERE = os.path.dirname(__file__)
 REF = os.path.join(HERE, "..", "..", "reference")
-FIX = json.load(open(os.path.join(HERE, "fixtures", "reference_import.json")))
+FIX = json.load(open(os.path.join(HERE, "..", "app", "seed", "reference_import.json")))
 
 
 def pdf_numbers():
