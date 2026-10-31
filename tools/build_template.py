@@ -28,6 +28,13 @@ for name in keep:
         if m.min_col >= column_index_from_string('Z'):
             ws.unmerge_cells(str(m))
     ws._images = []
+    # xls palette index for the section-heading fill is mis-mapped to 00FF00 by the converter;
+    # the printed original (and Excel) shows D8E4BC
+    from openpyxl.styles import PatternFill
+    for row in ws.iter_rows():
+        for c in row:
+            if c.fill is not None and c.fill.fill_type == 'solid' and str(c.fill.fgColor.rgb).upper().endswith('00FF00'):
+                c.fill = PatternFill('solid', fgColor='FFD8E4BC', bgColor='FFD8E4BC')
 # rows beyond the printed area of the quotation hold a non-printed duplicate; drop them
 q = wf['5. Quotation']
 if q.max_row > 79:

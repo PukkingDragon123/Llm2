@@ -465,7 +465,7 @@ def compute(estimate: dict) -> dict:
         c.calc(base + ".total", f"{sh.get('name')}: total", s_total, "SUM(line amounts)",
                " + ".join(fmt(c.nodes[k].value) for k in s_keys) or "0", s_keys, cur)
         sheets[sid] = {"total": s_total, "currency": cur}
-        sheet_rows.append({**sh, "id": sid, "lines": out_lines, "material_cost": n_total, "freight": fr_total,
+        sheet_rows.append({**sh, "id": sid, "lines": out_lines, "material_cost": n_total, "freight_total": fr_total,
                            "grand": grand, "total": s_total})
 
     # ---------------- quote buckets ----------------
