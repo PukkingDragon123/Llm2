@@ -1,0 +1,174 @@
+{
+ "5. Quotation": {
+  "images": [
+   {
+    "name": "logo",
+    "anchor_from": {
+     "cell": "A1",
+     "col_off_emu": 0,
+     "row_off_emu": 47160
+    },
+    "anchor_to": {
+     "cell": "E2",
+     "col_off_emu": 261360,
+     "row_off_emu": 257400
+    },
+    "size_emu": [
+     1355400,
+     467280
+    ]
+   },
+   {
+    "name": "certs",
+    "anchor_from": {
+     "cell": "A76",
+     "col_off_emu": 0,
+     "row_off_emu": 37800
+    },
+    "anchor_to": {
+     "cell": "Y80",
+     "col_off_emu": 190800,
+     "row_off_emu": 9720
+    },
+    "size_emu": [
+     7119360,
+     733680
+    ]
+   }
+  ],
+  "print_setup": {
+   "paper": "A4 (code 9)",
+   "paper_code": 9,
+   "orientation": "portrait",
+   "scale_percent": 95,
+   "fit_to_page": false,
+   "margins_in": {
+    "left": 0.4724409448818898,
+    "right": 0.1968503937007874,
+    "top": 0.4330708661417323,
+    "bottom": 0.35433070866141736,
+    "header": 0.15748031496062992,
+    "footer": 0.31496062992125984
+   },
+   "margins_pt": {
+    "left": 34.02,
+    "right": 14.17,
+    "top": 31.18,
+    "bottom": 25.51,
+    "header": 11.34,
+    "footer": 22.68
+   },
+   "center_horizontally": true,
+   "center_vertically": false,
+   "print_area": "$A$1:$Y$79",
+   "print_title_rows": "$1:$17",
+   "manual_row_breaks": [
+    {
+     "break_after_row": 50,
+     "note": "break before row 51; second break at row 80 is outside the print area (no effect)"
+    }
+   ],
+   "header_text": "",
+   "footer_raw": "&L&\"Angsana New,\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32\"&14Prolog Titanium Corporation Co.,Ltd.&R&\"Angsana New,\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32\"&14FM-SAL-001 REV.NO.03 EFF.DATE 05/03/25",
+   "footer_parsed": {
+    "left": "Prolog Titanium Corporation Co.,Ltd.",
+    "right": "FM-SAL-001 REV.NO.03 EFF.DATE 05/03/25",
+    "font": "Angsana New (Thai: \u0e18\u0e23\u0e23\u0e21\u0e14\u0e32=Regular)",
+    "size_pt": 14
+   },
+   "show_gridlines_on_print": false
+  }
+ },
+ "Disclaimers": {
+  "images": [
+   {
+    "name": "logo",
+    "anchor_from": {
+     "cell": "A1",
+     "col_off_emu": 50040,
+     "row_off_emu": 0
+    },
+    "anchor_to": {
+     "cell": "E2",
+     "col_off_emu": 301680,
+     "row_off_emu": 257400
+    },
+    "size_emu": [
+     1336320,
+     514440
+    ]
+   },
+   {
+    "name": "certs",
+    "anchor_from": {
+     "cell": "A46",
+     "col_off_emu": 170640,
+     "row_off_emu": 66960
+    },
+    "anchor_to": {
+     "cell": "Y50",
+     "col_off_emu": 362160,
+     "row_off_emu": 142920
+    },
+    "size_emu": [
+     6869160,
+     838080
+    ]
+   }
+  ],
+  "print_setup": {
+   "paper": "A4 (code 9)",
+   "paper_code": 9,
+   "orientation": "portrait",
+   "scale_percent": 98,
+   "fit_to_page": false,
+   "margins_in": {
+    "left": 0.35433070866141736,
+    "right": 0.07874015748031496,
+    "top": 0.6692913385826772,
+    "bottom": 0.7480314960629921,
+    "header": 0.31496062992125984,
+    "footer": 0.31496062992125984
+   },
+   "margins_pt": {
+    "left": 25.51,
+    "right": 5.67,
+    "top": 48.19,
+    "bottom": 53.86,
+    "header": 22.68,
+    "footer": 22.68
+   },
+   "center_horizontally": false,
+   "center_vertically": false,
+   "print_area": "$A$1:$Y$50",
+   "print_title_rows": null,
+   "manual_row_breaks": [],
+   "header_text": "",
+   "footer_raw": "&L&\"Angsana New,\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32\"&14Prolog Titanium Corporation Co.,Ltd.&R&\"Angsana New,\u0e18\u0e23\u0e23\u0e21\u0e14\u0e32\"&14FM-SAL-001 REV.NO.03 EFF.DATE 05/03/25",
+   "footer_parsed": {
+    "left": "Prolog Titanium Corporation Co.,Ltd.",
+    "right": "FM-SAL-001 REV.NO.03 EFF.DATE 05/03/25",
+    "font": "Angsana New (Thai: \u0e18\u0e23\u0e23\u0e21\u0e14\u0e32=Regular)",
+    "size_pt": 14
+   },
+   "show_gridlines_on_print": false
+  }
+ },
+ "disclaimer_variables": {
+  "E7": "product_subject",
+  "F8": "customer_name",
+  "J11": "customer_name",
+  "M12": "customer_name",
+  "L14": "product_subject",
+  "D17": "product_subject",
+  "F19": "product_subject",
+  "E21": "customer_name",
+  "I22": "product_subject",
+  "F24": "customer_name",
+  "M25": "product_subject",
+  "I26": "customer_name",
+  "H28": "customer_name",
+  "J29": "product_subject",
+  "D32": "product_subject"
+ }
+}

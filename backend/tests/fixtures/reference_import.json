@@ -1,0 +1,4607 @@
+{
+ "project": {
+  "job_no": "JI-263937",
+  "customer_name": "Moritani Singapore Pte.Ltd.(Kashima Chemical)",
+  "contact_person": "YUSUKE DOI",
+  "tel": "-",
+  "fax": "-",
+  "email": "doi.yusuke@moritani.co.jp",
+  "product_subject": "Titanium Recycle Drum",
+  "enquiry_date": "2026-08-18",
+  "drawing_no": "MTS-240009",
+  "quotation_no": "QT-2608533-PJ-REV.3-NTWS",
+  "source_file": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls"
+ },
+ "estimate": {
+  "settings": {
+   "quote_currency": "USD",
+   "fx_thb_per_usd": 33.47113,
+   "fx_date": "31/08/2026",
+   "thb_to_usd_factor": 0.9,
+   "usd_to_thb_factor": 1.05,
+   "ovh_pct": 0.1,
+   "risk_pct": 0.06,
+   "margin_divisor": 0.75,
+   "item_round_digits": -1,
+   "ces_round_digits": -2,
+   "ces_discount_pct": 0.07,
+   "quote_discount_pct": 0.1,
+   "set_qty": 1.0,
+   "header_price_mode": "ces"
+  },
+  "labor_params": {
+   "salary_adj": 1.07,
+   "days_per_month": 30,
+   "hours_per_day": 8
+  },
+  "labor_rates": [
+   {
+    "id": "L4",
+    "position": "PD Eng",
+    "site": "Nonthaburi",
+    "salary": 26000.0,
+    "note": "แจ๊ค, นาย, ต้น",
+    "optional": false
+   },
+   {
+    "id": "L5",
+    "position": "ช่างโรง 1",
+    "site": "Nonthaburi",
+    "salary": 26560.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L6",
+    "position": "ช่างโรง 2",
+    "site": "Nonthaburi",
+    "salary": 0.0,
+    "note": "",
+    "optional": true
+   },
+   {
+    "id": "L7",
+    "position": "ช่างโรง 3",
+    "site": "Nonthaburi",
+    "salary": 28090.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L8",
+    "position": "ช่างโรง 4",
+    "site": "Nonthaburi",
+    "salary": 23730.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L9",
+    "position": "ช่างโรง 5",
+    "site": "Nonthaburi",
+    "salary": 18960.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L10",
+    "position": "ช่างเชื่อม โรง 6,7",
+    "site": "Nonthaburi",
+    "salary": 26160.0,
+    "note": "อีฟ,ชัย,เต้ย",
+    "optional": false
+   },
+   {
+    "id": "L11",
+    "position": "ช่างเชื่อม Onsite",
+    "site": "Nonthaburi",
+    "salary": 26460.0,
+    "note": "บอย บ๊วย พงษ์",
+    "optional": false
+   },
+   {
+    "id": "L12",
+    "position": "QC ในโรงงาน",
+    "site": "Nonthaburi",
+    "salary": 33930.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L13",
+    "position": "QC Onsite",
+    "site": "Nonthaburi",
+    "salary": 35140.0,
+    "note": "บิ๊ก, ฟลุ๊ค",
+    "optional": false
+   },
+   {
+    "id": "L14",
+    "position": "หัวหน้างาน Onsite",
+    "site": "Nonthaburi",
+    "salary": 31510.0,
+    "note": "แฮ็ค,บั้ม",
+    "optional": false
+   },
+   {
+    "id": "L15",
+    "position": "Safety Onsite",
+    "site": "Nonthaburi",
+    "salary": 18000.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L18",
+    "position": "PD Eng",
+    "site": "Rayong",
+    "salary": 32190.0,
+    "note": "เกมส์, ทัช",
+    "optional": false
+   },
+   {
+    "id": "L19",
+    "position": "ช่าง Machine",
+    "site": "Rayong",
+    "salary": 46460.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L20",
+    "position": "QC Inspector",
+    "site": "Rayong",
+    "salary": 37600.0,
+    "note": "อ้อม, หนุ่ม, โชค",
+    "optional": false
+   },
+   {
+    "id": "L21",
+    "position": "ช่างเชื่อมโปรลอก",
+    "site": "Rayong",
+    "salary": 38460.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L22",
+    "position": "ช่างประกอบโปรลอก",
+    "site": "Rayong",
+    "salary": 18000.0,
+    "note": "",
+    "optional": false
+   },
+   {
+    "id": "L23",
+    "position": "หัวหน้างาน Onsite",
+    "site": "Rayong",
+    "salary": 44870.0,
+    "note": "เบิ้ล, ตูน, ตี๋",
+    "optional": false
+   },
+   {
+    "id": "L24",
+    "position": "Safety Onsite",
+    "site": "Rayong",
+    "salary": 19500.0,
+    "note": "",
+    "optional": false
+   }
+  ],
+  "crews": [
+   {
+    "id": "in-house",
+    "name": "In-House",
+    "days": 60.0,
+    "per_diem": 100.0,
+    "ot15_hours": 0,
+    "ot3_hours": 0,
+    "confined_pct": 0,
+    "members": [
+     {
+      "role": "Supervisor Normal time",
+      "rate_id": "L23",
+      "persons": 1.0
+     },
+     {
+      "role": "Helper Normal time",
+      "rate_id": "L22",
+      "persons": 0
+     },
+     {
+      "role": "Safety Officer Normal time",
+      "rate_id": "L24",
+      "persons": 0
+     },
+     {
+      "role": "Fire Watch Man Normal time",
+      "rate_id": "L24",
+      "persons": 0
+     },
+     {
+      "role": "QC. Onspector Normal time",
+      "rate_id": "L20",
+      "persons": 1.0
+     },
+     {
+      "role": "Welder Normal time",
+      "rate_id": "L21",
+      "persons": 4.0
+     },
+     {
+      "role": "Fitter Normal time",
+      "rate_id": "L22",
+      "persons": 5.0
+     }
+    ],
+    "extras_per_day": []
+   },
+   {
+    "id": "onsite",
+    "name": "Onsite",
+    "days": 1.0,
+    "per_diem": 100.0,
+    "ot15_hours": 0,
+    "ot3_hours": 0,
+    "confined_pct": 0,
+    "members": [
+     {
+      "role": "Supervisor Normal time",
+      "rate_id": "L23",
+      "persons": 0
+     },
+     {
+      "role": "Helper Normal time",
+      "rate_id": "L22",
+      "persons": 0
+     },
+     {
+      "role": "Safety Officer Normal time",
+      "rate_id": "L24",
+      "persons": 0
+     },
+     {
+      "role": "Fire Watch Man Normal time",
+      "rate_id": "L24",
+      "persons": 0
+     },
+     {
+      "role": "QC. Onspector Normal time",
+      "rate_id": "L20",
+      "persons": 0
+     },
+     {
+      "role": "Welder Normal time",
+      "rate_id": "L21",
+      "persons": 0
+     },
+     {
+      "role": "Fitter Normal time",
+      "rate_id": "L22",
+      "persons": 0
+     },
+     {
+      "role": "*** Include: Mobilization, Transportation  ***",
+      "rate_id": null,
+      "persons": 0
+     }
+    ],
+    "extras_per_day": [
+     {
+      "name": "Accomodation cost (ค่าที่พัก)",
+      "amount": 600.0,
+      "basis": "per_person",
+      "persons_per_unit": 2
+     },
+     {
+      "name": "Food cost",
+      "amount": 100.0,
+      "basis": "per_person",
+      "persons_per_unit": 1
+     }
+    ]
+   }
+  ],
+  "machine_params": {
+   "hours_per_year": 1200.0,
+   "dep_years": 5.0,
+   "electricity_rate": 5.0,
+   "operator_rate_id": "L19",
+   "operator_rate": null
+  },
+  "machines": [
+   {
+    "name": "01 Shearing Machine",
+    "description": "เครื่องตัดแผ่น",
+    "price": 1640000.0,
+    "kwh": 15.0,
+    "consumable_ratio": 0.3,
+    "workbook_rate": 966.0
+   },
+   {
+    "name": "02 Sawing Machine",
+    "description": "เครื่องเลื่อย",
+    "price": 170000.0,
+    "kwh": 4.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 327.0
+   },
+   {
+    "name": "03 Press Brake Machine (S)",
+    "description": "เครื่องพับ (เล็ก)",
+    "price": 246800.0,
+    "kwh": 11.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 407.0
+   },
+   {
+    "name": "04 Press Brake Machine (L)",
+    "description": "เครื่องพับ (ใหญ่)",
+    "price": 2146586.0,
+    "kwh": 30.0,
+    "consumable_ratio": 0.3,
+    "workbook_rate": 1252.0
+   },
+   {
+    "name": "05 Pipe Bending Machine",
+    "description": "เครื่องดัดท่อ",
+    "price": 1472000.0,
+    "kwh": 7.5,
+    "consumable_ratio": 0.3,
+    "workbook_rate": 858.0
+   },
+   {
+    "name": "06 Plate Bending Machine",
+    "description": "เครื่องม้วน",
+    "price": 1830000.0,
+    "kwh": 15.0,
+    "consumable_ratio": 0.3,
+    "workbook_rate": 1045.0
+   },
+   {
+    "name": "07 Laser Cutting Machine",
+    "description": "เครื่องตัดเลเซอร์",
+    "price": 5380709.0,
+    "kwh": 60.0,
+    "consumable_ratio": 0.3,
+    "workbook_rate": 2750.0
+   },
+   {
+    "name": "08 Plasma Cutting Machine",
+    "description": "เครื่องตัดพลาสม่า",
+    "price": 1350000.0,
+    "kwh": 30.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 1145.0
+   },
+   {
+    "name": "09 Waterjet Cutting Machine",
+    "description": "เครื่องตัดน้ำ",
+    "price": 3500000.0,
+    "kwh": 45.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 2474.0
+   },
+   {
+    "name": "10 Drilling Machine",
+    "description": "เครื่องเจาะ",
+    "price": 300000.0,
+    "kwh": 3.5,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 400.0
+   },
+   {
+    "name": "11 Manual Lathe Machine",
+    "description": "เครื่องกลึง",
+    "price": 980000.0,
+    "kwh": 7.5,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 817.0
+   },
+   {
+    "name": "12 Manual Milling Machine",
+    "description": "เครื่องกัด",
+    "price": 800000.0,
+    "kwh": 5.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 699.0
+   },
+   {
+    "name": "13 CNC Lathe Machine",
+    "description": "เครื่องกลึง CNC",
+    "price": 2750000.0,
+    "kwh": 20.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 1912.0
+   },
+   {
+    "name": "14 CNC Milling Machine",
+    "description": "เครื่องกัด CNC",
+    "price": 2110000.0,
+    "kwh": 25.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 1563.0
+   },
+   {
+    "name": "15 Wire Cut Machine",
+    "description": "เครื่องตัดด้วยลวด",
+    "price": 450000.0,
+    "kwh": 8.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 510.0
+   },
+   {
+    "name": "16 CNC Double Colunm",
+    "description": "เครื่องกัด Double Colunm",
+    "price": 7800000.0,
+    "kwh": 70.0,
+    "consumable_ratio": 0.3,
+    "workbook_rate": 3808.0
+   },
+   {
+    "name": "17 Polishing Machine",
+    "description": "เครื่องขัดผิว",
+    "price": 900000.0,
+    "kwh": 5.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 758.0
+   },
+   {
+    "name": "18 Sandblasting Machine",
+    "description": "เครื่องพ่นทราย",
+    "price": 141000.0,
+    "kwh": 15.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 365.0
+   },
+   {
+    "name": "19 Laser Marking Machine",
+    "description": "เครื่องเลเซอร์มาร์ค",
+    "price": 250000.0,
+    "kwh": 1.5,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 361.0
+   },
+   {
+    "name": "20 CNC Plasma Welding",
+    "description": "เครื่องเชื่อมพลาสม่า",
+    "price": 4451660.0,
+    "kwh": 35.0,
+    "consumable_ratio": 0.3,
+    "workbook_rate": 2237.0
+   },
+   {
+    "name": "21 TIG Welding Machine",
+    "description": "เครื่องเชื่อม TIG",
+    "price": 65000.0,
+    "kwh": 8.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 286.0
+   },
+   {
+    "name": "22 CNC Swiss type",
+    "description": "เครื่องกลึงน็อต",
+    "price": 400000.0,
+    "kwh": 15.0,
+    "consumable_ratio": 0.5,
+    "workbook_rate": 516.0
+   },
+   {
+    "name": "23 Outsorce",
+    "description": "จ้างทำ",
+    "price": null,
+    "kwh": 0,
+    "consumable_ratio": null,
+    "workbook_rate": null
+   },
+   {
+    "name": "01 Mill Surface",
+    "description": "10000",
+    "price": 300.0,
+    "kwh": 200.0,
+    "consumable_ratio": 0.16666666666666666,
+    "workbook_rate": null
+   },
+   {
+    "name": "02 Glass Blast",
+    "description": "40000",
+    "price": 300.0,
+    "kwh": 200.0,
+    "consumable_ratio": 0.6666666666666666,
+    "workbook_rate": null
+   }
+  ],
+  "materials": [
+   {
+    "code": "01",
+    "name": "01 Ti Gr-1 Plate",
+    "thb_per_kg": 444.986725237855,
+    "density": 4.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "02",
+    "name": "02 Ti Gr-2 Plate",
+    "thb_per_kg": 451.408971659195,
+    "density": 4.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "03",
+    "name": "03 Ti Gr-4 Plate",
+    "thb_per_kg": 475.659589552239,
+    "density": 4.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "04",
+    "name": "04 Ti Gr-5 Plate",
+    "thb_per_kg": 713.489384328359,
+    "density": 4.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "05",
+    "name": "05 Ti Gr-7 Plate",
+    "thb_per_kg": 4530.93510329397,
+    "density": 4.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "06",
+    "name": "06 Ti Gr-2 Wire",
+    "thb_per_kg": 657.337735192907,
+    "density": 4.6,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "07",
+    "name": "07 Ti Gr-4 Wire",
+    "thb_per_kg": 907.268437863804,
+    "density": 4.6,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "08",
+    "name": "08 Ti Gr-7 Wire",
+    "thb_per_kg": 5716.06055719123,
+    "density": 4.6,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "09",
+    "name": "09 Ti Gr-1 Round Bar",
+    "thb_per_kg": 0,
+    "density": 4.6,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "10",
+    "name": "10 Ti Gr-2 Round Bar",
+    "thb_per_kg": 729.435922188237,
+    "density": 4.6,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "11",
+    "name": "11 Ti Gr-5 Round Bar",
+    "thb_per_kg": 663.72816421885,
+    "density": 4.6,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "12",
+    "name": "12 Ti Gr-2 Thread Rod",
+    "thb_per_kg": 1662.04138957436,
+    "density": 4.6,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "13",
+    "name": "13 Ti Gr-23 Round Bar",
+    "thb_per_kg": 0,
+    "density": 4.6,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "14",
+    "name": "14 Ti Gr-2 Flat Bar",
+    "thb_per_kg": 527.268302899453,
+    "density": 4.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "15",
+    "name": "15 Ti Gr-2 Block",
+    "thb_per_kg": 0,
+    "density": 4.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "16",
+    "name": "16 Ti Gr-5 Block",
+    "thb_per_kg": 0,
+    "density": 4.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "17",
+    "name": "17 Ti Gr-1 Tube",
+    "thb_per_kg": 990.03647262377,
+    "density": 4.6,
+    "shape": "ODTL",
+    "size_labels": [
+     "OD=",
+     "T=",
+     "L="
+    ]
+   },
+   {
+    "code": "18",
+    "name": "18 Ti Gr-1 Tube",
+    "thb_per_kg": 1450.92,
+    "density": 4.6,
+    "shape": "ODTL",
+    "size_labels": [
+     "OD=",
+     "T=",
+     "L="
+    ]
+   },
+   {
+    "code": "19",
+    "name": "19 Ti Gr-2 Tube",
+    "thb_per_kg": 990.03647262377,
+    "density": 4.6,
+    "shape": "ODTL",
+    "size_labels": [
+     "OD=",
+     "T=",
+     "L="
+    ]
+   },
+   {
+    "code": "20",
+    "name": "20 Ti Gr-2 Pipe",
+    "thb_per_kg": 645.82,
+    "density": 4.6,
+    "shape": "ODTL",
+    "size_labels": [
+     "OD=",
+     "T=",
+     "L="
+    ]
+   },
+   {
+    "code": "21",
+    "name": "21 Ti Gr-2 SW7LW14",
+    "thb_per_kg": 1000.0,
+    "density": 2.6,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "22",
+    "name": "22 Copper Flat Bar",
+    "thb_per_kg": 0,
+    "density": 9.1,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "23",
+    "name": "23 Copper Round Bar",
+    "thb_per_kg": 0,
+    "density": 9.1,
+    "shape": "DiaL",
+    "size_labels": [
+     "Dia=",
+     "L=",
+     ""
+    ]
+   },
+   {
+    "code": "24",
+    "name": "24 Aluminium Flat Bar",
+    "thb_per_kg": 0,
+    "density": 3.0,
+    "shape": "TWL",
+    "size_labels": [
+     "T=",
+     "W=",
+     "L="
+    ]
+   },
+   {
+    "code": "25",
+    "name": "25 Other",
+    "thb_per_kg": 0,
+    "density": null,
+    "shape": "TWL",
+    "size_labels": [
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "parts": [
+   {
+    "id": "r12",
+    "group": "Mat.Titanium",
+    "name": "Shell",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 6.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 8.0
+     },
+     {
+      "machine": "06 Plate Bending Machine",
+      "hours": 40.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r13",
+    "group": "Mat.Titanium",
+    "name": "Elliptical Head (Top)",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 2.0
+     },
+     {
+      "machine": "23 Outsorce",
+      "hours": null
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r14",
+    "group": "Mat.Titanium",
+    "name": "Elliptical Head (Bottom)",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 2.0
+     },
+     {
+      "machine": "23 Outsorce",
+      "hours": null
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r17",
+    "group": "Plate Support.",
+    "name": "Lifting Lug No.4",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r18",
+    "group": "Plate Support.",
+    "name": "Stiffener Lifting Lug No.5",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r19",
+    "group": "Plate Support.",
+    "name": "PAD. Lifting Lug -1 No.6",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r20",
+    "group": "Plate Support.",
+    "name": "PAD. Lifting Lug -2 No.7",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r21",
+    "group": "Plate Support.",
+    "name": "Clip Lock Gasset Plate No.11",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 46.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r22",
+    "group": "Plate Support.",
+    "name": "Stiffener Ring TOP&BOTTOM No.12",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r23",
+    "group": "Plate Support.",
+    "name": "Clip Support TOP&BOTTOM No.13.1",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 24.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r24",
+    "group": "Plate Support.",
+    "name": "Clip Support TOP&BOTTOM No.13.2",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 24.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r25",
+    "group": "Plate Support.",
+    "name": "Clip Pipe Support No.16",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r28",
+    "group": "Nozzle.",
+    "name": "[Q] : Size. 20\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.5
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r29",
+    "group": "Nozzle.",
+    "name": "[A] : Size. 16\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.5
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r30",
+    "group": "Nozzle.",
+    "name": "[D,E] : Size. 12\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.5
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r31",
+    "group": "Nozzle.",
+    "name": "[B,C]: Size. 8\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.5
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r32",
+    "group": "Nozzle.",
+    "name": "[F,G,H] : Size. 6\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.5
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r33",
+    "group": "Nozzle.",
+    "name": "[P]: Size. 3\"",
+    "grade_code": "20",
+    "grade": "20 Ti Gr-2 Pipe",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "02 Sawing Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r34",
+    "group": "Nozzle.",
+    "name": "[J,L1,L2]: Size. 2\"",
+    "grade_code": "20",
+    "grade": "20 Ti Gr-2 Pipe",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "02 Sawing Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r35",
+    "group": "Nozzle.",
+    "name": "[K,M,N] : Size. 1\"",
+    "grade_code": "20",
+    "grade": "20 Ti Gr-2 Pipe",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "02 Sawing Machine",
+      "hours": 1.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r38",
+    "group": "Stub End Ring.",
+    "name": "[Q] : Size. 20\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r39",
+    "group": "Stub End Ring.",
+    "name": "[A] : Size. 16\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r40",
+    "group": "Stub End Ring.",
+    "name": "[D,E] : Size. 14\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r41",
+    "group": "Stub End Ring.",
+    "name": "[B,C] : Size. 8\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r42",
+    "group": "Stub End Ring.",
+    "name": "[F,G,H] : Size. 6\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r43",
+    "group": "Stub End Ring.",
+    "name": "[P] : Size. 3\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r44",
+    "group": "Stub End Ring.",
+    "name": "[J,L1,L2] : Size. 2\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r45",
+    "group": "Stub End Ring.",
+    "name": "[K,M,N] : Size. 1\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r46",
+    "group": "Stub End Ring.",
+    "name": "Linning Pad. For [Q]: Size. 20\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 0.2
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r49",
+    "group": "Pad Nozzle.",
+    "name": "[Q] : Size. 20\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 1.0
+     },
+     {
+      "machine": "06 Plate Bending Machine",
+      "hours": 4.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r50",
+    "group": "Pad Nozzle.",
+    "name": "[A] : Size. 16\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r51",
+    "group": "Pad Nozzle.",
+    "name": "[D,E] : Size. 14\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r52",
+    "group": "Pad Nozzle.",
+    "name": "[B,C] : Size. 8\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r53",
+    "group": "Pad Nozzle.",
+    "name": "[F,G,H] : Size. 6\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r54",
+    "group": "Pad Nozzle.",
+    "name": "[P] : Size. 3\"",
+    "grade_code": "02",
+    "grade": "02 Ti Gr-2 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r57",
+    "group": "Linning for Stub End Ring.",
+    "name": "Size. 20\"",
+    "grade_code": "05",
+    "grade": "05 Ti Gr-7 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 3.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r58",
+    "group": "Linning for Stub End Ring.",
+    "name": "Size. 16\"",
+    "grade_code": "05",
+    "grade": "05 Ti Gr-7 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r59",
+    "group": "Linning for Stub End Ring.",
+    "name": "Size. 14\"",
+    "grade_code": "05",
+    "grade": "05 Ti Gr-7 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r60",
+    "group": "Linning for Stub End Ring.",
+    "name": "Size. 8\"",
+    "grade_code": "05",
+    "grade": "05 Ti Gr-7 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r61",
+    "group": "Linning for Stub End Ring.",
+    "name": "Size. 6\"",
+    "grade_code": "05",
+    "grade": "05 Ti Gr-7 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r62",
+    "group": "Linning for Stub End Ring.",
+    "name": "Size. 3\"",
+    "grade_code": "05",
+    "grade": "05 Ti Gr-7 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r63",
+    "group": "Linning for Stub End Ring.",
+    "name": "Size. 2\"",
+    "grade_code": "05",
+    "grade": "05 Ti Gr-7 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r64",
+    "group": "Linning for Stub End Ring.",
+    "name": "Size. 1\"",
+    "grade_code": "05",
+    "grade": "05 Ti Gr-7 Plate",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r67",
+    "group": "Mat.Carbon Steel",
+    "name": "Gusset Plate Support Luge No.8",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 24.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 2.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r68",
+    "group": "Mat.Carbon Steel",
+    "name": "Base Plate Support Luge No.9",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "09 Waterjet Cutting Machine",
+      "hours": 8.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r69",
+    "group": "Mat.Carbon Steel",
+    "name": "Top Plate Support Luge No.10",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 2.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r72",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Lap-Joint Flange [HDG] (FF) Size.  20\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r73",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Lap-Joint Flange [HDG] (FF) Size.  16\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r74",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Lap-Joint Flange [HDG] (FF) Size.  12\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r75",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Lap-Joint Flange [HDG] (FF) Size.  8\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r76",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Lap-Joint Flange [HDG] (FF) Size.  6\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r77",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Lap-Joint Flange [HDG] (FF) Size.  3\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r78",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Lap-Joint Flange [HDG] (FF) Size.  2\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r79",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Lap-Joint Flange [HDG] (FF) Size.  1\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r80",
+    "group": "Flange For Nozzle (Lap-Joint Flange [HDG] (FF))",
+    "name": "Blind Flange [HDG] (FF) Size.  20\" JIS5K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r83",
+    "group": "Stud Bolt and Nuts  :  A193 B7 / A194 2H (HDG)",
+    "name": "Stud Bolt and 2Nuts  3/4\"x85L :  A193 B7 / A194 2H (HDG) No.14",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 48.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r84",
+    "group": "Stud Bolt and Nuts  :  A193 B7 / A194 2H (HDG)",
+    "name": "Stud Bolt and 2Nuts : 3/4\"x110L :  A193 B7 / A194 2H (HDG) No.15",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 24.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r85",
+    "group": "Stud Bolt and Nuts  :  A193 B7 / A194 2H (HDG)",
+    "name": "Stud Bolt and 2Nuts  1\" x 160L  :  A193 B7 / A194 2H (HDG) Flange 20\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 20.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": "สั่ง Part สำเร็จ"
+   },
+   {
+    "id": "r88",
+    "group": "Gasket. : PTFE (Thk 4 mm)",
+    "name": "Size.  20\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r89",
+    "group": "Gasket. : PTFE (Thk 4 mm)",
+    "name": "Size.  16\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r90",
+    "group": "Gasket. : PTFE (Thk 4 mm)",
+    "name": "Size.  12\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r91",
+    "group": "Gasket. : PTFE (Thk 4 mm)",
+    "name": "Size.  8\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r92",
+    "group": "Gasket. : PTFE (Thk 4 mm)",
+    "name": "Size.  6\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r93",
+    "group": "Gasket. : PTFE (Thk 4 mm)",
+    "name": "Size.  3\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r94",
+    "group": "Gasket. : PTFE (Thk 4 mm)",
+    "name": "Size.  2\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r95",
+    "group": "Gasket. : PTFE (Thk 4 mm)",
+    "name": "Size.  1\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r98",
+    "group": "Saddle For Transportation.",
+    "name": "Plate SS400 10'x20'x6t",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 8.0
+     },
+     {
+      "machine": "06 Plate Bending Machine",
+      "hours": 8.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r102",
+    "group": "Blind Flange for Test. ( CS )",
+    "name": "Size.  20\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r103",
+    "group": "Blind Flange for Test. ( CS )",
+    "name": "Size.  16\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r104",
+    "group": "Blind Flange for Test. ( CS )",
+    "name": "Size.  12\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r105",
+    "group": "Blind Flange for Test. ( CS )",
+    "name": "Size.  8\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r106",
+    "group": "Blind Flange for Test. ( CS )",
+    "name": "Size.  6\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r107",
+    "group": "Blind Flange for Test. ( CS )",
+    "name": "Size.  3\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r108",
+    "group": "Blind Flange for Test. ( CS )",
+    "name": "Size.  2\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r109",
+    "group": "Blind Flange for Test. ( CS )",
+    "name": "Size.  1\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r112",
+    "group": "Blind Flange for Transportation. ( SUS )",
+    "name": "Size.  16\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [
+     {
+      "machine": "07 Laser Cutting Machine",
+      "hours": 4.0
+     }
+    ],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r113",
+    "group": "Blind Flange for Transportation. ( SUS )",
+    "name": "Size.  12\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r114",
+    "group": "Blind Flange for Transportation. ( SUS )",
+    "name": "Size.  8\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r115",
+    "group": "Blind Flange for Transportation. ( SUS )",
+    "name": "Size.  6\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r116",
+    "group": "Blind Flange for Transportation. ( SUS )",
+    "name": "Size.  3\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 2.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r117",
+    "group": "Blind Flange for Transportation. ( SUS )",
+    "name": "Size.  2\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 1.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r118",
+    "group": "Blind Flange for Transportation. ( SUS )",
+    "name": "Size.  1\" JIS10K",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 3.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r121",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  20\" JIS5K :  Size 1\" x 160L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 20.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r122",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  16\" JIS10K :  Size 1\" x 135L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 16.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r123",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  12\" JIS10K :  Size 1\" x 120L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 32.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r124",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  8\" JIS10K :  Size 7/8\" x 110L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 24.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r125",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  6\" JIS10K :  Size 7/8\" x 100L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 24.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r126",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  3\" JIS10K :  Size 3/4\" x 90L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 8.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r127",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  2\" JIS10K :  Size 3/4\" x 85L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 12.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r128",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  1\" JIS10K :  Size 3/4\" x 65L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 12.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r129",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  6\" JIS10K :  Size 7/8\" x 100L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 24.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r130",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  3\" JIS10K :  Size 3/4\" x 90L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 8.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r131",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  2\" JIS10K :  Size 3/4\" x 85L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 12.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   },
+   {
+    "id": "r132",
+    "group": "Stud Bolt and 2Nuts  :  A193 B7 / A194 2H ( TEST)",
+    "name": "for Size.  1\" JIS10K :  Size 3/4\" x 65L mm.",
+    "grade_code": "25",
+    "grade": "25 Other",
+    "s1": null,
+    "s2": null,
+    "s3": null,
+    "qty": 12.0,
+    "discount_pct": 0,
+    "processes": [],
+    "machine_multiplier": 1.0,
+    "pricing": "price_sheet",
+    "remark": ""
+   }
+  ],
+  "services": [
+   {
+    "id": "s153",
+    "group": "Drawing",
+    "name": "Drawing",
+    "amount": "20000",
+    "currency": "THB",
+    "unit": "Cost /Job",
+    "source": "4. CES!F153 =20000/O169"
+   },
+   {
+    "id": "s154",
+    "group": "Outsource",
+    "name": "01 จ้างขึ้นรูป ED Head",
+    "amount": "45000+42000",
+    "currency": "THB",
+    "unit": "Cost /Job",
+    "source": "4. CES!F154 =(45000+42000)/O169"
+   },
+   {
+    "id": "s157",
+    "group": "QC Testing",
+    "name": "01 PT Test",
+    "rate": 50.0,
+    "qty": 990.476190476191,
+    "minimum": 0,
+    "currency": "THB",
+    "unit": "",
+    "source": "PBD FOR Piping!AF96"
+   },
+   {
+    "id": "s158",
+    "group": "QC Testing",
+    "name": "02 RT Test",
+    "rate": 15000.0,
+    "qty": 7.0,
+    "minimum": 0,
+    "currency": "THB",
+    "unit": "",
+    "source": "PBD FOR Piping!AF108"
+   },
+   {
+    "id": "s159",
+    "group": "QC Testing",
+    "name": "05 Hydro Test",
+    "rate": 0,
+    "qty": 1,
+    "unit": "job",
+    "minimum": 30000.0,
+    "currency": "THB",
+    "source": "4. CES!BN138 table (MAX(cost, minimum))"
+   },
+   {
+    "id": "s162",
+    "group": "Surface Finished",
+    "name": "07 Polishing",
+    "rate": 150.0,
+    "qty": 200.0,
+    "unit": "m²",
+    "minimum": 500.0,
+    "currency": "THB",
+    "source": "4. CES!BN44 table"
+   },
+   {
+    "id": "s163",
+    "group": "Surface Finished",
+    "name": "08 Painting",
+    "rate": 30000.0,
+    "qty": 1,
+    "unit": "job",
+    "minimum": 5000.0,
+    "currency": "THB",
+    "source": "4. CES!BN45 table (MAX(cost, minimum))"
+   },
+   {
+    "id": "s164",
+    "group": "Saddle & Packing",
+    "name": "Saddle & Packing",
+    "amount": "24800",
+    "currency": "THB",
+    "unit": "Cost/ Trip",
+    "source": "4. CES!F164 =24800/O169"
+   }
+  ],
+  "price_sheets": [
+   {
+    "id": "import",
+    "name": "Import Price",
+    "currency": "USD",
+    "round_digits": -1,
+    "tax_pct": 0,
+    "margin_divisor": 1.0,
+    "freight": [
+     {
+      "label": "ค่าขนส่งซัพ Sea Freight",
+      "amount": "55500",
+      "currency": "THB"
+     },
+     {
+      "label": "ค่าขนส่งซัพ Air Freight",
+      "amount": "0",
+      "currency": "USD"
+     }
+    ],
+    "lines": [
+     {
+      "id": "r5",
+      "group": "Plate",
+      "material": "Ti.Gr.2",
+      "description": "1000x1500x3t mm.",
+      "qty": 2.0,
+      "unit_price": 203.0,
+      "unit_weight": 20.3,
+      "price_source": "'BOQ LIST (Import)'!H6"
+     },
+     {
+      "id": "r6",
+      "group": "Plate",
+      "material": "Ti.Gr.2",
+      "description": "1000x1000x5t mm.",
+      "qty": 1.0,
+      "unit_price": 226.0,
+      "unit_weight": 22.55,
+      "price_source": "'BOQ LIST (Import)'!H7"
+     },
+     {
+      "id": "r7",
+      "group": "Plate",
+      "material": "Ti.Gr.2",
+      "description": "2000x6000x6t mm.",
+      "qty": 7.0,
+      "unit_price": 3395.0,
+      "unit_weight": 324.72,
+      "price_source": "'BOQ LIST (Import)'!H8"
+     },
+     {
+      "id": "r8",
+      "group": "Plate",
+      "material": "Ti.Gr.2",
+      "description": "2000x4000x8t mm.",
+      "qty": 2.0,
+      "unit_price": 3195.0,
+      "unit_weight": 288.64,
+      "price_source": "'BOQ LIST (Import)'!H9"
+     },
+     {
+      "id": "r9",
+      "group": "Plate",
+      "material": "Ti.Gr.2",
+      "description": "1000x1000x10t mm.",
+      "qty": 1.0,
+      "unit_price": 148.0,
+      "unit_weight": 45.1,
+      "price_source": "workbook formula ='BOQ LIST (Import)'!H10-442"
+     },
+     {
+      "id": "r10",
+      "group": "Plate",
+      "material": "Ti.Gr.2",
+      "description": "600x600x12t mm.",
+      "qty": 1.0,
+      "unit_price": 255.0,
+      "unit_weight": 19.48,
+      "price_source": "'BOQ LIST (Import)'!H11"
+     },
+     {
+      "id": "r11",
+      "group": "Plate",
+      "material": "Ti.Gr.2",
+      "description": "600x600x16t mm.",
+      "qty": 1.0,
+      "unit_price": 340.0,
+      "unit_weight": 25.98,
+      "price_source": "'BOQ LIST (Import)'!H12"
+     },
+     {
+      "id": "r12",
+      "group": "Plate",
+      "material": "Ti.Gr.7",
+      "description": "1000x1000x3t mm.",
+      "qty": 1.0,
+      "unit_price": 1665.0,
+      "unit_weight": 13.53,
+      "price_source": "'BOQ LIST (Import)'!H13"
+     },
+     {
+      "id": "r13",
+      "group": "Pipe SMLS",
+      "material": "B861 Gr.2",
+      "description": "3'' Sch.40 x L.1000 mm.",
+      "qty": 1.0,
+      "unit_price": 306.0,
+      "unit_weight": 1.44,
+      "price_source": "'BOQ LIST (Import)'!H14"
+     },
+     {
+      "id": "r14",
+      "group": "Pipe SMLS",
+      "material": "B861 Gr.2",
+      "description": "2'' Sch.40 x L.1000 mm.",
+      "qty": 1.0,
+      "unit_price": 163.0,
+      "unit_weight": 3.12,
+      "price_source": "'BOQ LIST (Import)'!H15"
+     },
+     {
+      "id": "r15",
+      "group": "Pipe SMLS",
+      "material": "B861 Gr.2",
+      "description": "1'' Sch.40 x L.1000 mm.",
+      "qty": 1.0,
+      "unit_price": 92.0,
+      "unit_weight": 6.49,
+      "price_source": "'BOQ LIST (Import)'!H16"
+     }
+    ],
+    "bucket": null,
+    "workbook_total": 35710.0
+   },
+   {
+    "id": "import_wfn",
+    "name": "Import Price (WFN)",
+    "currency": "USD",
+    "round_digits": 0,
+    "tax_pct": 0,
+    "margin_divisor": 1.0,
+    "freight": [
+     {
+      "label": "ค่าขนส่งซัพ Air Freight",
+      "amount": 963.92207918353,
+      "currency": "USD"
+     }
+    ],
+    "lines": [
+     {
+      "id": "r5",
+      "group": "Lap joint Flange FF (HUB)",
+      "material": "A105  (HDG.)",
+      "description": "20\" JIS10K",
+      "qty": 1.0,
+      "unit_price": 274.1,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H22"
+     },
+     {
+      "id": "r6",
+      "group": "Blind  Flange FF",
+      "material": "A105  (HDG.)",
+      "description": "20\" JIS10K",
+      "qty": 1.0,
+      "unit_price": 356.1,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H23"
+     },
+     {
+      "id": "r7",
+      "group": "Lap joint Flange FF (HUB)",
+      "material": "A105  (HDG.)",
+      "description": "16\" JIS10K",
+      "qty": 2.0,
+      "unit_price": 210.6,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H24"
+     },
+     {
+      "id": "r8",
+      "group": "Lap joint Flange FF (HUB)",
+      "material": "A105  (HDG.)",
+      "description": "12\" JIS10K",
+      "qty": 2.0,
+      "unit_price": 121.5,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H25"
+     },
+     {
+      "id": "r9",
+      "group": "Lap joint Flange FF",
+      "material": "A105  (HDG.)",
+      "description": "8\" JIS10K",
+      "qty": 2.0,
+      "unit_price": 67.4,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H26"
+     },
+     {
+      "id": "r10",
+      "group": "Lap joint Flange FF",
+      "material": "A105  (HDG.)",
+      "description": "6\" JIS10K",
+      "qty": 3.0,
+      "unit_price": 49.5,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H27"
+     },
+     {
+      "id": "r11",
+      "group": "Lap joint Flange FF",
+      "material": "A105  (HDG.)",
+      "description": "3\" JIS10K",
+      "qty": 2.0,
+      "unit_price": 19.1,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H28"
+     },
+     {
+      "id": "r12",
+      "group": "Lap joint Flange FF",
+      "material": "A105  (HDG.)",
+      "description": "2\" JIS10K",
+      "qty": 1.0,
+      "unit_price": 12.5,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H29"
+     },
+     {
+      "id": "r13",
+      "group": "Lap joint Flange FF",
+      "material": "A105  (HDG.)",
+      "description": "1\" JIS10K",
+      "qty": 3.0,
+      "unit_price": 10.4,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Import)'!H30"
+     }
+    ],
+    "bucket": null,
+    "workbook_total": 2633.0
+   },
+   {
+    "id": "domestic",
+    "name": "Domectric Price",
+    "currency": "THB",
+    "round_digits": -1,
+    "tax_pct": 0,
+    "margin_divisor": 1.0,
+    "freight": [
+     {
+      "label": "ค่าขนส่งซัพ Sea Freight",
+      "amount": "0",
+      "currency": "THB"
+     },
+     {
+      "label": "ค่าขนส่งซัพ Air Freight",
+      "amount": "0",
+      "currency": "THB"
+     }
+    ],
+    "lines": [
+     {
+      "id": "r5",
+      "group": "Plate",
+      "material": "A36",
+      "description": "1550 x 20' x 35t mm.",
+      "qty": 1.0,
+      "unit_price": 98800.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H6"
+     },
+     {
+      "id": "r6",
+      "group": "Plate",
+      "material": "A36",
+      "description": "3100 x 3048 x 12t mm.",
+      "qty": 1.0,
+      "unit_price": 35000.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H7"
+     },
+     {
+      "id": "r7",
+      "group": "Plate",
+      "material": "A36",
+      "description": "4' x 8' x 10t mm.",
+      "qty": 1.0,
+      "unit_price": 8900.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H8"
+     },
+     {
+      "id": "r8",
+      "group": "Plate",
+      "material": "SS400",
+      "description": "5' x 20' x 6t mm.",
+      "qty": 3.0,
+      "unit_price": 10600.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H9"
+     },
+     {
+      "id": "r18",
+      "group": "GASKET  RF",
+      "material": "PTFE",
+      "description": "20\"  JIS10K Thk.4 mm",
+      "qty": 1.0,
+      "unit_price": 3373.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H43"
+     },
+     {
+      "id": "r19",
+      "group": "GASKET  RF",
+      "material": "PTFE",
+      "description": "16\"  JIS10K Thk.4 mm",
+      "qty": 1.0,
+      "unit_price": 2426.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H44"
+     },
+     {
+      "id": "r20",
+      "group": "GASKET  RF",
+      "material": "PTFE",
+      "description": "12\"  JIS10K Thk.4 mm",
+      "qty": 2.0,
+      "unit_price": 1536.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H45"
+     },
+     {
+      "id": "r21",
+      "group": "GASKET  RF",
+      "material": "PTFE",
+      "description": "8\"  JIS10K Thk.4 mm",
+      "qty": 2.0,
+      "unit_price": 750.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H46"
+     },
+     {
+      "id": "r22",
+      "group": "GASKET  RF",
+      "material": "PTFE",
+      "description": "6\"  JIS10K Thk.4 mm",
+      "qty": 3.0,
+      "unit_price": 453.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H47"
+     },
+     {
+      "id": "r23",
+      "group": "GASKET  RF",
+      "material": "PTFE",
+      "description": "3\"  JIS10K Thk.4 mm",
+      "qty": 2.0,
+      "unit_price": 180.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H48"
+     },
+     {
+      "id": "r24",
+      "group": "GASKET  RF",
+      "material": "PTFE",
+      "description": "2\"  JIS10K Thk.4 mm",
+      "qty": 1.0,
+      "unit_price": 110.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H49"
+     },
+     {
+      "id": "r25",
+      "group": "GASKET  RF",
+      "material": "PTFE",
+      "description": "1\"  JIS10K Thk.4 mm",
+      "qty": 3.0,
+      "unit_price": 41.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H50"
+     },
+     {
+      "id": "r26",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "1\" x 160L  mm.",
+      "qty": 40.0,
+      "unit_price": 600.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H56"
+     },
+     {
+      "id": "r27",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "1\" x 135L mm.",
+      "qty": 16.0,
+      "unit_price": 520.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H57"
+     },
+     {
+      "id": "r28",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "1\" x 120L mm.",
+      "qty": 32.0,
+      "unit_price": 420.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H58"
+     },
+     {
+      "id": "r29",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "7/8\" x 110L mm.",
+      "qty": 24.0,
+      "unit_price": 320.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H59"
+     },
+     {
+      "id": "r30",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "7/8\" x 100L mm.",
+      "qty": 48.0,
+      "unit_price": 280.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H60"
+     },
+     {
+      "id": "r31",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "3/4\"x110L mm.",
+      "qty": 24.0,
+      "unit_price": 220.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H61"
+     },
+     {
+      "id": "r32",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "3/4\" x 90L mm.",
+      "qty": 16.0,
+      "unit_price": 230.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H62"
+     },
+     {
+      "id": "r33",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "3/4\" x 85L mm.",
+      "qty": 72.0,
+      "unit_price": 190.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H63"
+     },
+     {
+      "id": "r34",
+      "group": "Stud Bolt / 2Nuts",
+      "material": "A193 B7 / A194 2H (HDG)",
+      "description": "3/4\" x 65L mm.",
+      "qty": 24.0,
+      "unit_price": 170.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H64"
+     },
+     {
+      "id": "r35",
+      "group": "Blind  Flange FF",
+      "material": "SS400 (HDG.)",
+      "description": "20\" JIS10K",
+      "qty": 1.0,
+      "unit_price": 17014.5,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H70"
+     },
+     {
+      "id": "r36",
+      "group": "Blind  Flange FF",
+      "material": "SS400 (HDG.)",
+      "description": "16\" JIS10K",
+      "qty": 1.0,
+      "unit_price": 10640.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H71"
+     },
+     {
+      "id": "r37",
+      "group": "Blind  Flange FF",
+      "material": "SS400 (HDG.)",
+      "description": "12\" JIS10K",
+      "qty": 2.0,
+      "unit_price": 6650.0,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H72"
+     },
+     {
+      "id": "r38",
+      "group": "Blind  Flange FF",
+      "material": "SS400 (HDG.)",
+      "description": "8\" JIS10K",
+      "qty": 2.0,
+      "unit_price": 3467.5,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H73"
+     },
+     {
+      "id": "r39",
+      "group": "Blind  Flange FF",
+      "material": "SS400 (HDG.)",
+      "description": "6\" JIS10K",
+      "qty": 3.0,
+      "unit_price": 2359.8,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H74"
+     },
+     {
+      "id": "r40",
+      "group": "Blind  Flange FF",
+      "material": "SS400 (HDG.)",
+      "description": "3\" JIS10K",
+      "qty": 2.0,
+      "unit_price": 1130.5,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H75"
+     },
+     {
+      "id": "r41",
+      "group": "Blind  Flange FF",
+      "material": "SS400 (HDG.)",
+      "description": "2\" JIS10K",
+      "qty": 1.0,
+      "unit_price": 845.5,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H76"
+     },
+     {
+      "id": "r42",
+      "group": "Blind  Flange FF",
+      "material": "SS400 (HDG.)",
+      "description": "1\" JIS10K",
+      "qty": 3.0,
+      "unit_price": 617.5,
+      "unit_weight": null,
+      "price_source": "'BOQ LIST (Domectric)'!H77"
+     }
+    ],
+    "bucket": null,
+    "workbook_total": 340460.0
+   }
+  ],
+  "buckets": [
+   {
+    "no": 1,
+    "heading": "Main Part. : Titanium.",
+    "unit": "Lot.",
+    "qty": 1.0,
+    "markup": true,
+    "sources": [
+     {
+      "type": "price_sheet",
+      "id": "import"
+     }
+    ]
+   },
+   {
+    "no": 2,
+    "heading": "Other Accessories.",
+    "unit": "Lot.",
+    "qty": 1.0,
+    "markup": true,
+    "sources": [
+     {
+      "type": "price_sheet",
+      "id": "domestic"
+     },
+     {
+      "type": "price_sheet",
+      "id": "import_wfn"
+     }
+    ]
+   },
+   {
+    "no": 3,
+    "heading": "Labor cost",
+    "unit": "Lot.",
+    "qty": 1.0,
+    "markup": true,
+    "sources": [
+     {
+      "type": "services"
+     },
+     {
+      "type": "crews"
+     },
+     {
+      "type": "machines"
+     }
+    ]
+   },
+   {
+    "no": 4,
+    "heading": "JTEPA",
+    "unit": "Lot.",
+    "qty": 1.0,
+    "markup": false,
+    "sources": [
+     {
+      "type": "fixed",
+      "label": "JTEPA",
+      "amount": 30000.0,
+      "currency": "THB"
+     }
+    ]
+   }
+  ]
+ },
+ "quote_doc": {
+  "quotation_no": "QT-2608533-PJ-REV.3-NTWS",
+  "job_no": "JI-263937",
+  "customer_name": "Moritani Singapore Pte.Ltd.(Kashima Chemical)",
+  "contact_person": "YUSUKE DOI",
+  "tel": "-",
+  "fax": "-",
+  "email": "doi.yusuke@moritani.co.jp",
+  "product_subject": "Titanium Recycle Drum",
+  "drawing_no": "MTS-240009",
+  "enquiry_date": "2026-08-18",
+  "quotation_date": "2026-10-31",
+  "validity_date": "2026-10-26",
+  "payment_term": "-",
+  "delivery_time": 6.0,
+  "delivery_unit": "Months",
+  "currency_label": "USD.",
+  "title": {
+   "runs": [
+    {
+     "bold": true,
+     "italic": false,
+     "underline": false,
+     "color": null,
+     "text": "Titanium Recycle Drum  ( SIZE : ID 2,800 x TL 6,700 mm. )"
+    }
+   ],
+   "unit": "Set.",
+   "qty": 1.0
+  },
+  "rows": [
+   {
+    "kind": "item",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "Main Part. : Titanium."
+     }
+    ],
+    "item_no": 1
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Shell. : ASTM B265 Gr.2 : Size. Thk 6 mm.  ;  Q'ty = 1 Set."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Elliptical Head. : ASTM B265 Gr.2 : Min. Thk 5 mm. ( After Forming )  ;  Q'ty = 1 Set."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Elliptical Bottom. : ASTM B265 Gr.2 : Min. Thk 6.5 mm. ( After Forming )  ;  Q'ty = 1 Set."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Nozzle & Manhole.  : ASTM B265 / B862 Gr.2 : Size. Thk. 3 , 4 , 6 mm.  ;  Q'ty = 1 Lot."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Stub End Ring. / Lining Surface for Manhole. / Pad Nozzle. : ASTM B265 Gr.2 : Size. Thk 4 , 5 , 6 mm.  ;  Q'ty = 1 Lot."
+     }
+    ],
+    "height": 27.0
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "text": " - Plate for Linning of Stub End. : ",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null
+     },
+     {
+      "text": "ASTM B265 Gr.7 : Size. Thk 2 mm. ( After Machined )",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "FFFF0000"
+     },
+     {
+      "text": "  ;  Q'ty = 1 Lot.",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null
+     }
+    ],
+    "height": 27.0
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "text": " - Angle Support Ring. / Plate Support.",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null
+     },
+     {
+      "text": "/ Support Ladder.",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null
+     },
+     {
+      "text": " / Other Support. : ASTM B265 Gr.2 : Thk  6 , 10 , 16 mm.  ;  Q'ty = 1 Lot.",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null
+     }
+    ],
+    "height": 27.0
+   },
+   {
+    "kind": "blank",
+    "runs": []
+   },
+   {
+    "kind": "item",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "Other Accessories."
+     }
+    ],
+    "item_no": 2
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "text": " - Base Plate. / Ring Support Leg. / Gusset Plate. / Other Support. : ASTM A36 : Size.  Thk  35 , 12 , 10 mm. [ ",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null
+     },
+     {
+      "text": "Include Set Bolt and Nut for Connect to Tank",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "FFFF0000"
+     },
+     {
+      "text": " ]",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null
+     }
+    ],
+    "height": 30.0
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Loose Flange A105 (HDG.) : LJ-FF & BL-FF : Size. JIS10K  ;  Q'ty = 1 Lot."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Flange for Hydrostatic Test. & Transportation. : Carbon Steel./SUS304(1.5t) ;  Q'ty = 1 Lot."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Gasket for Service.  : PTFE  : Thickness 4 mm  ;  Q'ty = 1 Lot."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Gasket for Hydrostatic Test ( NBR / Neoprene )  ;  Q'ty = 1 Lot."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Bolt and Nut : CS (HDG)  for Blind Flange and Shell.  ;  Q'ty = 1 Lot."
+     }
+    ]
+   },
+   {
+    "kind": "blank",
+    "runs": []
+   },
+   {
+    "kind": "item",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "Labor cost"
+     }
+    ],
+    "item_no": 3
+   },
+   {
+    "kind": "bullet",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "• Assembly & Fabrication"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Fit-Up and Welding (Shop)"
+     }
+    ]
+   },
+   {
+    "kind": "bullet",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "• Surface Finishing"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "-  Polishing for Parts Titanium"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "-  Painting for Parts Carbon Steel"
+     }
+    ]
+   },
+   {
+    "kind": "bullet",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "• Non Destructive Test"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- PT 100%"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- RT Test 100% (Shop)"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Hydrostatic Test. (2.85 kg/cm²G.)"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "-  Pad Leak Test. (2 kg/cm²G.)"
+     }
+    ]
+   },
+   {
+    "kind": "bullet",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "• Engineering & QC Document"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Drawing"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Review WPS/PQR/WPQ"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Quality Report"
+     }
+    ]
+   },
+   {
+    "kind": "blank",
+    "runs": []
+   },
+   {
+    "kind": "item",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "JTEPA"
+     }
+    ],
+    "item_no": 4
+   },
+   {
+    "kind": "blank",
+    "runs": []
+   },
+   {
+    "kind": "highlight_head",
+    "runs": [
+     {
+      "text": "Transportation :",
+      "bold": true,
+      "italic": false,
+      "underline": true,
+      "color": null
+     },
+     {
+      "text": " Ex-Work (Thailand)",
+      "bold": true,
+      "italic": false,
+      "underline": true,
+      "color": "FFFF0000"
+     }
+    ]
+   },
+   {
+    "kind": "highlight_line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "-  Total weight for Transport :  ~ 6,200 Kg"
+     }
+    ]
+   },
+   {
+    "kind": "highlight_line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "-  Packing size for Transport : W.3.5 m x H.4.0 m x L.8.5 m"
+     }
+    ]
+   },
+   {
+    "kind": "blank",
+    "runs": []
+   },
+   {
+    "kind": "section_head",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": true,
+      "color": null,
+      "text": "Remark :"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Design Code From ASME VIII Div.01"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Design By Compress Program"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Material Titanium Origin : China ( BAOTI & SINCEMAT )"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Other Material Origin : Non India."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- For Shell which has Thickness 6 mm., We Design by Using load for Nozzle Size 16” and 12” and Take Only 60% from Load for Nozzle Standard Design."
+     }
+    ],
+    "height": 30.0
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Cancel. One Nozzle : 6B Size 6\" JIS10K"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "- Add. One Nozzle : 16B Size 16\" JIS10K"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "FFFF0000",
+      "text": "- The 10% discount case with validity until 26th October 2026."
+     }
+    ]
+   },
+   {
+    "kind": "blank",
+    "runs": []
+   },
+   {
+    "kind": "section_head",
+    "runs": [
+     {
+      "bold": true,
+      "italic": false,
+      "underline": true,
+      "color": null,
+      "text": "Term of Payment."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "1. 30% : Down Payment with 30% of Refund bond"
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "2. 40% : Main Material Receipt without bond."
+     }
+    ]
+   },
+   {
+    "kind": "line",
+    "runs": [
+     {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "text": "3. 30% : Delivery with 10% of Performance bond."
+     }
+    ]
+   },
+   {
+    "kind": "blank",
+    "runs": []
+   }
+  ],
+  "page_breaks": [
+   32
+  ],
+  "prepared_by": "Butsarakum T.",
+  "reviewed_by": "Natthawut S.",
+  "approved_by": "Nateetorn M."
+ },
+ "reference_values": {
+  "item.1.price": 55240.0,
+  "item.2.price": 21560.0,
+  "item.3.price": null,
+  "item.4.price": 1000.0,
+  "totals.total": null,
+  "totals.net": null,
+  "header.price": null,
+  "ps.import.total": 35710.0,
+  "ps.import_wfn.total": 2633.0,
+  "ps.domestic.total": 340460.0,
+  "machine:01 Shearing Machine": 966.0,
+  "machine:02 Sawing Machine": 327.0,
+  "machine:03 Press Brake Machine (S)": 407.0,
+  "machine:04 Press Brake Machine (L)": 1252.0,
+  "machine:05 Pipe Bending Machine": 858.0,
+  "machine:06 Plate Bending Machine": 1045.0,
+  "machine:07 Laser Cutting Machine": 2750.0,
+  "machine:08 Plasma Cutting Machine": 1145.0,
+  "machine:09 Waterjet Cutting Machine": 2474.0,
+  "machine:10 Drilling Machine": 400.0,
+  "machine:11 Manual Lathe Machine": 817.0,
+  "machine:12 Manual Milling Machine": 699.0,
+  "machine:13 CNC Lathe Machine": 1912.0,
+  "machine:14 CNC Milling Machine": 1563.0,
+  "machine:15 Wire Cut Machine": 510.0,
+  "machine:16 CNC Double Colunm": 3808.0,
+  "machine:17 Polishing Machine": 758.0,
+  "machine:18 Sandblasting Machine": 365.0,
+  "machine:19 Laser Marking Machine": 361.0,
+  "machine:20 CNC Plasma Welding": 2237.0,
+  "machine:21 TIG Welding Machine": 286.0,
+  "machine:22 CNC Swiss type": 516.0,
+  "crews.total_thb": 764303.4
+ },
+ "supplier_prices": [
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Plate",
+   "material": "Ti.Gr.2",
+   "description": "1000x1500x3t mm.",
+   "unit_price": 203.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 20.3,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r5",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Plate",
+   "material": "Ti.Gr.2",
+   "description": "1000x1000x5t mm.",
+   "unit_price": 226.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 22.55,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r6",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Plate",
+   "material": "Ti.Gr.2",
+   "description": "2000x6000x6t mm.",
+   "unit_price": 3395.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 324.72,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r7",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Plate",
+   "material": "Ti.Gr.2",
+   "description": "2000x4000x8t mm.",
+   "unit_price": 3195.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 288.64,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r8",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Plate",
+   "material": "Ti.Gr.2",
+   "description": "1000x1000x10t mm.",
+   "unit_price": 148.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 45.1,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r9",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Plate",
+   "material": "Ti.Gr.2",
+   "description": "600x600x12t mm.",
+   "unit_price": 255.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 19.48,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r10",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Plate",
+   "material": "Ti.Gr.2",
+   "description": "600x600x16t mm.",
+   "unit_price": 340.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 25.98,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r11",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Plate",
+   "material": "Ti.Gr.7",
+   "description": "1000x1000x3t mm.",
+   "unit_price": 1665.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 13.53,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r12",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Pipe SMLS",
+   "material": "B861 Gr.2",
+   "description": "3'' Sch.40 x L.1000 mm.",
+   "unit_price": 306.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 1.44,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r13",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Pipe SMLS",
+   "material": "B861 Gr.2",
+   "description": "2'' Sch.40 x L.1000 mm.",
+   "unit_price": 163.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 3.12,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r14",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Import supplier",
+   "sheet": "Import Price",
+   "group": "Pipe SMLS",
+   "material": "B861 Gr.2",
+   "description": "1'' Sch.40 x L.1000 mm.",
+   "unit_price": 92.0,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": 6.49,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price r15",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Lap joint Flange FF (HUB)",
+   "material": "A105  (HDG.)",
+   "description": "20\" JIS10K",
+   "unit_price": 274.1,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r5",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Blind  Flange FF",
+   "material": "A105  (HDG.)",
+   "description": "20\" JIS10K",
+   "unit_price": 356.1,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r6",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Lap joint Flange FF (HUB)",
+   "material": "A105  (HDG.)",
+   "description": "16\" JIS10K",
+   "unit_price": 210.6,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r7",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Lap joint Flange FF (HUB)",
+   "material": "A105  (HDG.)",
+   "description": "12\" JIS10K",
+   "unit_price": 121.5,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r8",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Lap joint Flange FF",
+   "material": "A105  (HDG.)",
+   "description": "8\" JIS10K",
+   "unit_price": 67.4,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r9",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Lap joint Flange FF",
+   "material": "A105  (HDG.)",
+   "description": "6\" JIS10K",
+   "unit_price": 49.5,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r10",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Lap joint Flange FF",
+   "material": "A105  (HDG.)",
+   "description": "3\" JIS10K",
+   "unit_price": 19.1,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r11",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Lap joint Flange FF",
+   "material": "A105  (HDG.)",
+   "description": "2\" JIS10K",
+   "unit_price": 12.5,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r12",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "WFN",
+   "sheet": "Import Price (WFN)",
+   "group": "Lap joint Flange FF",
+   "material": "A105  (HDG.)",
+   "description": "1\" JIS10K",
+   "unit_price": 10.4,
+   "currency": "USD",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Import Price (WFN) r13",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Plate",
+   "material": "A36",
+   "description": "1550 x 20' x 35t mm.",
+   "unit_price": 98800.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r5",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Plate",
+   "material": "A36",
+   "description": "3100 x 3048 x 12t mm.",
+   "unit_price": 35000.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r6",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Plate",
+   "material": "A36",
+   "description": "4' x 8' x 10t mm.",
+   "unit_price": 8900.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r7",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Plate",
+   "material": "SS400",
+   "description": "5' x 20' x 6t mm.",
+   "unit_price": 10600.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r8",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "GASKET  RF",
+   "material": "PTFE",
+   "description": "20\"  JIS10K Thk.4 mm",
+   "unit_price": 3373.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r18",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "GASKET  RF",
+   "material": "PTFE",
+   "description": "16\"  JIS10K Thk.4 mm",
+   "unit_price": 2426.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r19",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "GASKET  RF",
+   "material": "PTFE",
+   "description": "12\"  JIS10K Thk.4 mm",
+   "unit_price": 1536.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r20",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "GASKET  RF",
+   "material": "PTFE",
+   "description": "8\"  JIS10K Thk.4 mm",
+   "unit_price": 750.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r21",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "GASKET  RF",
+   "material": "PTFE",
+   "description": "6\"  JIS10K Thk.4 mm",
+   "unit_price": 453.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r22",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "GASKET  RF",
+   "material": "PTFE",
+   "description": "3\"  JIS10K Thk.4 mm",
+   "unit_price": 180.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r23",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "GASKET  RF",
+   "material": "PTFE",
+   "description": "2\"  JIS10K Thk.4 mm",
+   "unit_price": 110.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r24",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "GASKET  RF",
+   "material": "PTFE",
+   "description": "1\"  JIS10K Thk.4 mm",
+   "unit_price": 41.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r25",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "1\" x 160L  mm.",
+   "unit_price": 600.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r26",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "1\" x 135L mm.",
+   "unit_price": 520.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r27",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "1\" x 120L mm.",
+   "unit_price": 420.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r28",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "7/8\" x 110L mm.",
+   "unit_price": 320.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r29",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "7/8\" x 100L mm.",
+   "unit_price": 280.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r30",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "3/4\"x110L mm.",
+   "unit_price": 220.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r31",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "3/4\" x 90L mm.",
+   "unit_price": 230.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r32",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "3/4\" x 85L mm.",
+   "unit_price": 190.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r33",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Stud Bolt / 2Nuts",
+   "material": "A193 B7 / A194 2H (HDG)",
+   "description": "3/4\" x 65L mm.",
+   "unit_price": 170.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r34",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Blind  Flange FF",
+   "material": "SS400 (HDG.)",
+   "description": "20\" JIS10K",
+   "unit_price": 17014.5,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r35",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Blind  Flange FF",
+   "material": "SS400 (HDG.)",
+   "description": "16\" JIS10K",
+   "unit_price": 10640.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r36",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Blind  Flange FF",
+   "material": "SS400 (HDG.)",
+   "description": "12\" JIS10K",
+   "unit_price": 6650.0,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r37",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Blind  Flange FF",
+   "material": "SS400 (HDG.)",
+   "description": "8\" JIS10K",
+   "unit_price": 3467.5,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r38",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Blind  Flange FF",
+   "material": "SS400 (HDG.)",
+   "description": "6\" JIS10K",
+   "unit_price": 2359.8,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r39",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Blind  Flange FF",
+   "material": "SS400 (HDG.)",
+   "description": "3\" JIS10K",
+   "unit_price": 1130.5,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r40",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Blind  Flange FF",
+   "material": "SS400 (HDG.)",
+   "description": "2\" JIS10K",
+   "unit_price": 845.5,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r41",
+   "quote_date": "31/08/2026"
+  },
+  {
+   "supplier": "Domestic",
+   "sheet": "Domectric Price",
+   "group": "Blind  Flange FF",
+   "material": "SS400 (HDG.)",
+   "description": "1\" JIS10K",
+   "unit_price": 617.5,
+   "currency": "THB",
+   "unit": "pc",
+   "unit_weight": null,
+   "source": "QT-2608533_Rev.4_JI-263937_Titanium_Recycle_Drum.xls / Domectric Price r42",
+   "quote_date": "31/08/2026"
+  }
+ ],
+ "notes": [
+  "Service 'QC Testing4' (CES F160) could not be resolved; amount left blank",
+  "Service 'QC Testing5' (CES F161) could not be resolved; amount left blank",
+  "Domectric Price row 9 'Lap joint Flange FF (HUB) 20\" JIS10K' has qty 1 but no price in workbook (not imported)",
+  "Domectric Price row 10 'Blind  Flange FF 20\" JIS10K' has qty 1 but no price in workbook (not imported)",
+  "Domectric Price row 11 'Lap joint Flange FF (HUB) 16\" JIS10K' has qty 1 but no price in workbook (not imported)",
+  "Domectric Price row 12 'Lap joint Flange FF (HUB) 12\" JIS10K' has qty 2 but no price in workbook (not imported)",
+  "Domectric Price row 13 'Lap joint Flange FF 8\" JIS10K' has qty 2 but no price in workbook (not imported)",
+  "Domectric Price row 14 'Lap joint Flange FF 6\" JIS10K' has qty 3 but no price in workbook (not imported)",
+  "Domectric Price row 15 'Lap joint Flange FF 3\" JIS10K' has qty 2 but no price in workbook (not imported)",
+  "Domectric Price row 16 'Lap joint Flange FF 2\" JIS10K' has qty 1 but no price in workbook (not imported)",
+  "Domectric Price row 17 'Lap joint Flange FF 1\" JIS10K' has qty 3 but no price in workbook (not imported)"
+ ]
+}

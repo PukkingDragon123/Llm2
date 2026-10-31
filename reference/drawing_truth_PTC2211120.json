@@ -1,0 +1,891 @@
+{
+ "sources": {
+  "asbuilt": "asbuilt.pdf 5 sheets A3 vector, outlined text (no text layer) - read from renders",
+  "customer": "drawing.pdf 2 sheets A3 scan, 1970 Shin Meiwa Industry drawing + red handwriting"
+ },
+ "title_block": {
+  "dwg_no": "PTC.2211120-1..-5 (sheet n/5)",
+  "rev": "none (status 'AS BUILT'; rev table empty)",
+  "title": "TITANIUM TANK RECYCLE DRUM (E-VE-1C); sheets 1 'GENERAL ARRAGEMENT DRAWING', 2 'ARRANGEMENT OF SHELL', 3-4 'DETAIL NOZZLE', 5 'DETAIL NAME PLATE'",
+  "project": "TITANIUM TANK RECYCLE DRUM (E-VE-1C)",
+  "customer": "MORITANI SINGAPORE PTE.LTD. / KASHIMA CHEMICAL CO.,LTD.",
+  "fabricator": "PROLOG TITANIUM CORPORATION CO.,Ltd.",
+  "scale": "- (none stated; details 1:1, 2:1, 1.5:1, 2.5:1, 10:1, 30:1)",
+  "date": "18/4/23",
+  "size": "A3",
+  "ref_no": "Z-9413-0 (sh1), Z-9413-1 (sh3,4), - (sh2,5)",
+  "ptc_job": "2211120",
+  "customer_order_no": "blank on title; nameplate P.O. 1925-2960",
+  "drawn_checked": "header row: DWN 'SRWP', MGR 'NRRJ', APVD 'NRRJ', CHIEF/AUTH blank - column mapping uncertain",
+  "issue_mark": "- ; legend C=customer L=licensor F=field V=vendor"
+ },
+ "design_data": {
+  "code": "ASME Section VIII Div.1, 2021 Edition Metric (only design) - no U stamp implied",
+  "fluid": "C3H5ClO (epichlorohydrin)",
+  "fluid_type": "-",
+  "design_pressure": "0.19 MPaG (=1.94 kg/cm2G)",
+  "operating_pressure": "-",
+  "hydro_test": "0.28 MPaG",
+  "pneumatic_test": "-",
+  "design_temp": "80 C (nameplate: 80 / -59 C min)",
+  "operating_temp": "-",
+  "mdmt": "-29 C @ 200 kPa",
+  "mawp": "200 kPa @ 80 C (hot & corroded)",
+  "corrosion_allowance": "Ti 0 mm",
+  "radiography": "FULL shell / FULL head",
+  "joint_efficiency": "1.0 / 1.0",
+  "stress_relieved_head": "NO",
+  "pwht": "NO",
+  "insulation": "NO",
+  "fireproofing": "NO",
+  "painting": "YES (CS part only, i.e. support legs)",
+  "capacity": "47,002 L (nameplate 47 m3)",
+  "weights_kg": {
+   "empty": 4037,
+   "operating": 42822,
+   "full_water": 51039
+  },
+  "fluid_density": "1.21 kg/L (nameplate)",
+  "wind": "50 m/s (UBC-1997)",
+  "seismic": "0.3 (UBC-1997, building support)",
+  "nameplate_extra": {
+   "serial": "PTC2211120",
+   "year_built": 2023,
+   "po_no": "1925-2960",
+   "client": "KASHIMA CHEMICAL CO.,LTD.",
+   "test_date": "-",
+   "heat_treatment": "NONE"
+  }
+ },
+ "main_dims": {
+  "ID": 2800,
+  "shell_height": 6650,
+  "TL_to_TL": 6700,
+  "straight_flange": "25 each head",
+  "head_height_dim": "750 outside (top and bottom as dimensioned)",
+  "overall_height_derived": "about 8200 mm (6700 + 2 x ~750; not stated directly)",
+  "shell_plate_dev_length": 8815,
+  "course_heights": [
+   1650,
+   2000,
+   1000,
+   2000
+  ],
+  "support_ring": {
+   "base_plate_OD": 3512,
+   "top_plate_OD": 3372,
+   "ID": 3012,
+   "elevation_above_TL2": 825
+  },
+  "nozzle_elevations_dims": "front-view chain on right: 750/300 at top, 1000,1000,1000,1200,1000,1500,500 (+350,900 at bottom); 6500 overall - chain does not sum cleanly, see unclear_items"
+ },
+ "parts": [
+  {
+   "mark": 1,
+   "name": "SHELL",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 6,
+   "size_dims": "ID2800 x H6650 x THK6",
+   "qty": 1,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": "4 plate rows (WC.2..WC.5) 1650/2000/1000/2000 = 6650; developed plate length 8815 (6000+2815); long seams WL.1-WL.8; circ. seams WC.1-WC.5; TL-TL 6700"
+  },
+  {
+   "mark": 2,
+   "name": "ELLIP HEAD (top) 2:1",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 5,
+   "size_dims": "ID2800, min 5t after forming",
+   "qty": 1,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": "drawing text 'MIN. 5t A/F'; straight flange 25"
+  },
+  {
+   "mark": 3,
+   "name": "ELLIP HEAD (bottom) 2:1",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 6.5,
+   "size_dims": "ID2800, min 6.5t after forming",
+   "qty": 1,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": "'MIN. 6.5t A/F'"
+  },
+  {
+   "mark": 4,
+   "name": "LIFTING LUG",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 16,
+   "size_dims": null,
+   "qty": 2,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 5,
+   "name": "STIFFENER LIFTING LUG",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 12,
+   "size_dims": null,
+   "qty": 2,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 6,
+   "name": "PAD LIFTING LUG",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 8,
+   "size_dims": "60x220xTHK8",
+   "qty": 2,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 7,
+   "name": "PAD LIFTING LUG",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 8,
+   "size_dims": "180x220xTHK8",
+   "qty": 2,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 8,
+   "name": "GUSSET PLATE SUPPORT LEGS",
+   "material": "SA-36",
+   "thk_mm": 10,
+   "size_dims": null,
+   "qty": 24,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": "12 sets at 30 deg spacing (2 per set)"
+  },
+  {
+   "mark": 9,
+   "name": "BASE PLATE SUPPORT LEGS",
+   "material": "SA-36",
+   "thk_mm": 35,
+   "size_dims": "ring; OD3512 / ID3012 (section C-C, A-A) ",
+   "qty": 1,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": "1x dia50 tailing hole @90deg; 8x dia27 holes @0/90/180/270; PCD2912 / PCD3360 quoted - inconsistent, see unclear_items"
+  },
+  {
+   "mark": 10,
+   "name": "TOP PLATE SUPPORT LEGS",
+   "material": "SA-36",
+   "thk_mm": 12,
+   "size_dims": "ring; OD3372 / ID3012",
+   "qty": 1,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 11,
+   "name": "CLIP LOCK GUSSET PLATE",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 6,
+   "size_dims": null,
+   "qty": 46,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 12,
+   "name": "STIFFENER RING TOP&BOTTOM",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 6,
+   "size_dims": null,
+   "qty": 2,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 13,
+   "name": "CLIP SUPPORT TOP&BOTTOM",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 6,
+   "size_dims": null,
+   "qty": 2,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 14,
+   "name": "STUD BOLT 1-NUT 2 (GALVANIZED)",
+   "material": "SA-193 B7 / SA-194 2H",
+   "thk_mm": null,
+   "size_dims": "3/4in x L85",
+   "qty": 48,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 15,
+   "name": "STUD BOLT 1-NUT 2 (GALVANIZED)",
+   "material": "SA-193 B7 / SA-194 2H",
+   "thk_mm": null,
+   "size_dims": "3/4in x L110",
+   "qty": 24,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": 16,
+   "name": "PIPE SUPPORT",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 10,
+   "size_dims": "clip pipe support @324",
+   "qty": 3,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": "NP-1",
+   "name": "NAME PLATE",
+   "material": "SUS304",
+   "thk_mm": 2,
+   "size_dims": "180 x 155 (approx)",
+   "qty": 1,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": "sheet 5; engraved with design data"
+  },
+  {
+   "mark": "NP-2",
+   "name": "SUPPORT NAME PLATE (bracket)",
+   "material": "SB-265 Gr.2",
+   "thk_mm": 2,
+   "size_dims": "190 x ~150 x 50 high",
+   "qty": 1,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": "NP-3",
+   "name": "HEX BOLTS",
+   "material": "SUS304",
+   "thk_mm": null,
+   "size_dims": "M4 x L10",
+   "qty": 4,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": "NP-4",
+   "name": "HEX NUTS",
+   "material": "SUS304",
+   "thk_mm": null,
+   "size_dims": "M4",
+   "qty": 4,
+   "unit": "EA",
+   "weight_kg": null,
+   "notes": ""
+  },
+  {
+   "mark": "N-A",
+   "name": "Nozzle A (16in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK6 Gr.2; neck OD406.4x6t SB-862 Gr.2; pad OD926x6t; stopper 10x10 SB-265 Gr.2 x4; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "LIQUID INLET"
+  },
+  {
+   "mark": "N-B",
+   "name": "Nozzle B (8in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK6 Gr.2; neck OD219x6t SB-862 Gr.2; pad OD530x6t; stopper 10x10 SB-265 Gr.2 x4; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "LIQUID INLET"
+  },
+  {
+   "mark": "N-C",
+   "name": "Nozzle C (8in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK6 Gr.2; neck OD219x6t SB-862 Gr.2; pad OD400x6t; stopper 10x10 SB-265 Gr.2 x4; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304 VORTEX BREAKER THK6 SB-265 Gr.2, 1 set",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "LIQUID OUTLET (bottom head)"
+  },
+  {
+   "mark": "N-D,E",
+   "name": "Nozzle D,E (12in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x2; collaring THK6 Gr.2; neck OD323.85x6t SB-862 Gr.2; pad OD610x8t; stopper 10x10 SB-265 Gr.2 x8; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 2,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "LIQUID OUTLET (x2)"
+  },
+  {
+   "mark": "N-F",
+   "name": "Nozzle F (6in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK6 Gr.2; neck OD168.3x6t SB-862 Gr.2; pad OD368x6t; stopper 10x10 SB-265 Gr.2 x4; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "IW INLET"
+  },
+  {
+   "mark": "N-G,H",
+   "name": "Nozzle G,H (6in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x2; collaring THK6 Gr.2; neck OD168.3x6t SB-862 Gr.2; pad OD385x6t; stopper 10x10 SB-265 Gr.2 x8; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 2,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "AIR INLET / AIR OUTLET"
+  },
+  {
+   "mark": "N-J",
+   "name": "Nozzle J (2in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK5 Gr.2; neck PIPE 2in SCH40 SB-861 Gr.2; pad OD156x6t; stopper 10x10 SB-265 Gr.2 x2; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "BALANCE"
+  },
+  {
+   "mark": "N-K",
+   "name": "Nozzle K (1in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK4 Gr.2; neck PIPE 1in SCH40 SB-861 Gr.2; pad -; stopper 10x10 SB-265 Gr.2 x0; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304 LIP PLATE THK5 SB-265 Gr.2 x3",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "VENT"
+  },
+  {
+   "mark": "N-L1",
+   "name": "Nozzle L1 (3in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK5 Gr.2; neck PIPE 3in SCH40 SB-861 Gr.2; pad OD180x6t; stopper 10x10 SB-265 Gr.2 x2; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "LI (-)"
+  },
+  {
+   "mark": "N-L2",
+   "name": "Nozzle L2 (3in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK6 Gr.2; neck PIPE 3in SCH40 SB-861 Gr.2; pad OD180x6t; stopper 10x10 SB-265 Gr.2 x3; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304 LIP PLATE THK5 SB-265 Gr.2 x2",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "LI (+)"
+  },
+  {
+   "mark": "N-M",
+   "name": "Nozzle M (1in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK4 Gr.2; neck PIPE 1in SCH40 SB-861 Gr.2; pad -; stopper 10x10 SB-265 Gr.2 x0; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304 LIP PLATE THK5 SB-265 Gr.2 x3",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "TH"
+  },
+  {
+   "mark": "N-N",
+   "name": "Nozzle N (1in) assembly: LJ-FF flange JIS10K FF (HDG) SS400 x1; collaring THK4 Gr.2; neck PIPE 1in SCH40 SB-861 Gr.2; pad -; stopper 10x10 SB-265 Gr.2 x0; collaring lining 2t after M/C SB-265 Gr.7; plug 1/4in NPT SUS304 LIP PLATE THK5 SB-265 Gr.2 x3",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "LIQUID INLET"
+  },
+  {
+   "mark": "N-Q",
+   "name": "Manhole Q (20in) assembly",
+   "material": "mixed",
+   "thk_mm": null,
+   "size_dims": null,
+   "qty": 1,
+   "unit": "SET",
+   "weight_kg": null,
+   "notes": "see manhole_Q_parts"
+  }
+ ],
+ "manhole_Q_parts": [
+  {
+   "item": 1,
+   "name": "LJ-FF FLANGE JIS 5K FF (HDG)",
+   "material": "SS400",
+   "size": "20in",
+   "qty": 1
+  },
+  {
+   "item": 2,
+   "name": "COLLARING (stub-end ring)",
+   "material": "SB-265 Gr.2",
+   "size": "THK6",
+   "qty": 1
+  },
+  {
+   "item": 3,
+   "name": "NECK",
+   "material": "SB-862 Gr.2",
+   "size": "OD508x6t",
+   "qty": 1
+  },
+  {
+   "item": 4,
+   "name": "PAD",
+   "material": "SB-265 Gr.2",
+   "size": "OD970x6t",
+   "qty": 1
+  },
+  {
+   "item": 5,
+   "name": "RING PLATE LOCK FLANGE",
+   "material": "SB-265 Gr.2",
+   "size": "OD548xID510xTHK5",
+   "qty": 1
+  },
+  {
+   "item": 6,
+   "name": "BLIND FLANGE JIS 5K FF (HDG)",
+   "material": "SS400",
+   "size": "20in",
+   "qty": 1
+  },
+  {
+   "item": 7,
+   "name": "GASKET FOR FLANGE JIS 5K RF",
+   "material": "PTFE",
+   "size": "20in THK4",
+   "qty": 1
+  },
+  {
+   "item": 8,
+   "name": "STUD BOLT/NUT 2 (HDG)",
+   "material": "SA193 B7/SA194 2H",
+   "size": "7/8in x 135L",
+   "qty": 20
+  },
+  {
+   "item": 9,
+   "name": "HINGE TOP",
+   "material": "SS400",
+   "size": "PL-16t",
+   "qty": 2
+  },
+  {
+   "item": 10,
+   "name": "HINGE BOTTOM",
+   "material": "SS400",
+   "size": "PL-16t",
+   "qty": 2
+  },
+  {
+   "item": 11,
+   "name": "STUD BOLT/NUT 2/FLAT WASHER 2 (HDG)",
+   "material": "SA193 B7/SA194 2H",
+   "size": "7/8in x 365L",
+   "qty": 1
+  },
+  {
+   "item": 12,
+   "name": "SPLIT PIN",
+   "material": "SUS304",
+   "size": "dia5x50L",
+   "qty": 1
+  },
+  {
+   "item": 13,
+   "name": "HANDLE",
+   "material": "SS400",
+   "size": "RB dia16",
+   "qty": 1
+  },
+  {
+   "item": 14,
+   "name": "PIN LOCK",
+   "material": "SB-348 Gr.2",
+   "size": "RB dia6",
+   "qty": 10
+  },
+  {
+   "item": 15,
+   "name": "COLLARING LINING",
+   "material": "SB-265 Gr.7",
+   "size": "2t after M/C",
+   "qty": 1
+  },
+  {
+   "item": 16,
+   "name": "LINING PLATE",
+   "material": "SB-265 Gr.2",
+   "size": "THK3",
+   "qty": 1
+  },
+  {
+   "item": 17,
+   "name": "LINING RING",
+   "material": "SB-265 Gr.7",
+   "size": "2t after M/C",
+   "qty": 1
+  },
+  {
+   "item": 18,
+   "name": "HEX BOLT LOCK LINING PLATE",
+   "material": "SB-348 Gr.2",
+   "size": "M8 x L13",
+   "qty": 6
+  },
+  {
+   "item": 19,
+   "name": "PLUG",
+   "material": "SUS304",
+   "size": "1/4in NPT",
+   "qty": 1
+  }
+ ],
+ "nozzles": [
+  {
+   "mark": "A",
+   "service": "LIQUID INLET",
+   "size": "16in",
+   "dn": 400,
+   "sch_or_neck": "neck OD406.4x6t (SB-862 Gr.2)",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint: loose flange + Gr.2 collar/stub, Gr.7 lining 2t",
+   "qty": 1,
+   "reinf_pad": "6t / OD926",
+   "connected_pipe": "16in Thk.6",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "B",
+   "service": "LIQUID INLET",
+   "size": "8in",
+   "dn": 200,
+   "sch_or_neck": "OD219x6t",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint",
+   "qty": 1,
+   "reinf_pad": "6t / OD530",
+   "connected_pipe": "8in Thk.6",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "C",
+   "service": "LIQUID OUTLET",
+   "size": "8in",
+   "dn": 200,
+   "sch_or_neck": "OD219x6t",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint + vortex breaker",
+   "qty": 1,
+   "reinf_pad": "6t / OD400",
+   "connected_pipe": "8in Thk.6",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "D",
+   "service": "LIQUID OUTLET",
+   "size": "12in",
+   "dn": 350,
+   "sch_or_neck": "OD323.85x6t",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint",
+   "qty": 1,
+   "reinf_pad": "8t / OD610",
+   "connected_pipe": "12in Thk.6",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "E",
+   "service": "LIQUID OUTLET",
+   "size": "12in",
+   "dn": 350,
+   "sch_or_neck": "OD323.85x6t",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint",
+   "qty": 1,
+   "reinf_pad": "8t / OD610",
+   "connected_pipe": "12in Thk.6",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "F",
+   "service": "IW INLET",
+   "size": "6in",
+   "dn": 150,
+   "sch_or_neck": "OD168.3x6t",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint",
+   "qty": 1,
+   "reinf_pad": "6t / OD368",
+   "connected_pipe": "6in Thk.6",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "G",
+   "service": "AIR INLET",
+   "size": "6in",
+   "dn": 150,
+   "sch_or_neck": "OD168.3x6t",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint (top head)",
+   "qty": 1,
+   "reinf_pad": "6t / OD385",
+   "connected_pipe": "6in Thk.6",
+   "projection": null,
+   "notes": "top head, 950 mm from centreline"
+  },
+  {
+   "mark": "H",
+   "service": "AIR OUTLET",
+   "size": "6in",
+   "dn": 150,
+   "sch_or_neck": "OD168.3x6t",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint (top head)",
+   "qty": 1,
+   "reinf_pad": "6t / OD385",
+   "connected_pipe": "6in Thk.6",
+   "projection": null,
+   "notes": "top head, 950 mm from centreline"
+  },
+  {
+   "mark": "J",
+   "service": "BALANCE",
+   "size": "2in",
+   "dn": 50,
+   "sch_or_neck": "PIPE 2in SCH40 (SB-861)",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint (top head)",
+   "qty": 1,
+   "reinf_pad": "6t / OD156",
+   "connected_pipe": "2in SCH40",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "K",
+   "service": "VENT",
+   "size": "1in",
+   "dn": 25,
+   "sch_or_neck": "PIPE 1in SCH40",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint (top head centre)",
+   "qty": 1,
+   "reinf_pad": null,
+   "connected_pipe": "1in SCH40",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "L1",
+   "service": "LI (-)",
+   "size": "3in",
+   "dn": 80,
+   "sch_or_neck": "PIPE 3in SCH40",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint (top head side)",
+   "qty": 1,
+   "reinf_pad": "6t / OD180",
+   "connected_pipe": "2in SCH40 per load table (conflict)",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "L2",
+   "service": "LI (+)",
+   "size": "3in",
+   "dn": 80,
+   "sch_or_neck": "PIPE 3in SCH40",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint + 2 lip plates",
+   "qty": 1,
+   "reinf_pad": "6t / OD180",
+   "connected_pipe": "2in SCH40 per load table (conflict)",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "M",
+   "service": "TH",
+   "size": "1in",
+   "dn": 25,
+   "sch_or_neck": "PIPE 1in SCH40",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint",
+   "qty": 1,
+   "reinf_pad": null,
+   "connected_pipe": "1in SCH40",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "N",
+   "service": "LIQUID INLET",
+   "size": "1in",
+   "dn": 25,
+   "sch_or_neck": "PIPE 1in SCH40",
+   "flange_rating": "LJF.JIS10K/RF (drawing text); parts list says LJ-FF JIS10K FF (HDG) SS400",
+   "type": "lap joint (top head)",
+   "qty": 1,
+   "reinf_pad": null,
+   "connected_pipe": "1in SCH40",
+   "projection": null,
+   "notes": ""
+  },
+  {
+   "mark": "P",
+   "service": "(not in nozzle list; 3in in load table + shell layout)",
+   "size": "3in",
+   "dn": 80,
+   "sch_or_neck": null,
+   "flange_rating": null,
+   "type": null,
+   "qty": 1,
+   "reinf_pad": null,
+   "connected_pipe": "3in SCH40",
+   "projection": null,
+   "notes": "no detail sheet, no part list; probably the 3in LI/LC nozzle - see unclear_items"
+  },
+  {
+   "mark": "Q",
+   "service": "MANHOLE (WITH BLIND)",
+   "size": "20in",
+   "dn": 500,
+   "sch_or_neck": "neck OD508x6t",
+   "flange_rating": "LJF.JIS5K/RF",
+   "type": "lap joint + hinged blind flange",
+   "qty": 1,
+   "reinf_pad": "6t / OD970",
+   "connected_pipe": "20in Thk.6",
+   "projection": null,
+   "notes": "blind JIS5K FF SS400 HDG; PTFE 4t gasket; 20x 7/8in studs"
+  }
+ ],
+ "nozzle_loads_note": "Sheet 1 table gives direct loads (VL/Vc/Pr N) and moments (Mc/ML/Mt N-m) per nozzle: K,M,N DN25 none; J,L1,L2 DN50 1646/1646/1290 N, 271/339/434; P DN80 2358/2358/1868, 583/732/936; F,G,H DN150 4448/4448/3559, 2074/2630/3335; B,C DN200 5783/5783/4626, 3498/4447/5654; D,E DN350 7019/7019/5605, 6907/8769/11161; A DN400 8541/8541/6832, 7216/9168/11665; Q DN500 none.",
+ "supports_legs": {
+  "type": "ring/belt-type support structure at ~825 above bottom TL, drawn as 'SUPPORT LEGS' (items 8,9,10)",
+  "base_plate": "SA-36 35t",
+  "top_plate": "SA-36 12t",
+  "gusset": "SA-36 10t x24 (12 sets @30 deg)",
+  "anchor_holes": "8x dia27 @0/90/180/270; 1x dia50 tailing hole @90",
+  "clip_system": "clip support top&bottom (13) 6t x2 sets, stiffener ring (12) 6t x2, clip lock gusset (11) 6t x46, studs 3/4in x L85 x48 and x L110 x24 (GALV)",
+  "lifting": "2 lifting lugs 16t Gr.2 @0/180 deg, 2 stiffener 12t, pads 180x220x8 and 60x220x8; tail lug hole dia90",
+  "pipe_support": "3 x 10t Gr.2 clip pipe support @dia324 (internal)"
+ },
+ "welds_nde": {
+  "joint_detail": "V-groove 60+/-5 deg, root gap 2-3 mm (details joint H, I on sheet 1; joints WL.A1,B1,C1,D1,E1,01 on sheet 3)",
+  "weld_ids": "WL.1-WL.12 longitudinal/head seams, WC.1-WC.5 circ seams, TL.1/TL.2 tangent lines",
+  "nde": "Full radiography shell/head; reinforcement pads: 1/4in NPT tell-tale hole with 304 SS plug, leak test 1.05 kg/cm2G (about 0.10 MPa)",
+  "lining": "'2t after M/C' = Gr.7 lining thickness after machining"
+ },
+ "surface_finish": "none stated for titanium; flanges/studs/blind HDG or galvanized; painting for CS parts only",
+ "notes": [
+  "All dimensions mm unless otherwise specified",
+  "All flange bolt holes straddle centre line axis or horizontal/vertical axis of vessel",
+  "Nozzle collar (stub end) lap-joint with loose flange + Gr.7 2t collar lining",
+  "Sheet 2: shell plate development with nozzle/clip/nameplate positions by angle"
+ ],
+ "customer_drawing": {
+  "title_block": {
+   "maker": "SHIN MEIWA INDUSTRY CO., LTD. (stamp 'ISSUED MAR 25 1970, ENGG. DEPT.')",
+   "title": "ECH-PLANT, RECYCLE DRUM (E-VE-1A,B,C)",
+   "dwg_no": "Z-9415-0 (sheet 1 assembly); Z-9413-1 (sheet 2 nozzle details, ref Z-9413-0)",
+   "quotation_ref": "MTS-240009 (Prolog job-sheet number, not printed on drawing)",
+   "job_no": "5401",
+   "wo_no": "1212",
+   "scale": "1/30 (approx, faint)",
+   "drawn_checked": "handwritten names illegible",
+   "revisions": "triangle revision marks, dates 44.xx (1969) and later - illegible"
+  },
+  "design_conditions": {
+   "readable": {
+    "joint_efficiency": "65 %",
+    "corrosion_allowance": "0",
+    "weight_empty": "7,000 kg",
+    "weight_full": "53,600 kg",
+    "stress_relief": "nil",
+    "radiography": "nil",
+    "insulation": "nil"
+   },
+   "illegible": [
+    "design pressure (blurry; xlsx says 1.9 kg/cm2G)",
+    "design temp",
+    "hydro test",
+    "air test (looks like 2 kg/cm2G)",
+    "capacity"
+   ]
+  },
+  "nozzle_table_sizes": "A16B B8B C8B D14B E14B F6B G6B H6B J2B K1B L1,L2 2B (qty2) M1B N1B P3B Q20B manhole - OCR of faint scan, D/E and L sizes differ from as-built (12in, 3in)",
+  "nozzle_construction": "neck STPG38 sch40 (sch80 small bores), sleeve+backing plate+lining TP-28 (JIS Ti class 2), reinforcement SS41 12t, flange JIS10K SS41 RF (manhole JIS5K)",
+  "red_notes": [
+   "Total: 3 set",
+   "Painting: TB1",
+   "Japanese: 既設 純チタンライニング (existing: pure titanium lining)",
+   "Shell: CS (carbon steel)",
+   "TP28 sleeve ... SF41 9t (partly legible)",
+   "arrow to nozzle table flange column: 'SS41/Ti' and '38' (STPG38)",
+   "sheet 2 near nozzle J: 'Face部 パラジウム入り' (face = Pd-bearing Ti, i.e. Gr.7)"
+  ],
+  "printed_notes_jp": [
+   "1) quantity 3 vessels (E-VE-1A/B/C), part numbers per 1 vessel",
+   "2) fabricate per SEO-P-850 fabrication guideline",
+   "3) painting: anti-corrosion ... (illegible)"
+  ],
+  "customer_parts_summary": "items 101-124: shell/heads (101,102), ladder lugs 124 (SS41 9t x6), pipe-support lug 109 (x6), name-plate bracket 107, plug 108, nozzle assemblies 110-123 (A..Q), each with -1 neck, -2 sleeve TP-28 2t, -3 reinforcing plate SS41 12t, -4 backing plate TP-28 2t, -5 lining TP-28 6t (or rib FB38x5 x3 on small nozzles); manhole 122 flange 32t SS41, blind 32t, hinge 16t, studs M20x120 x28"
+ },
+ "unclear_items": [
+  "As-built sheets are outlined vector text; all values read visually - weights per part NOT stated anywhere.",
+  "Support ring dims inconsistent (PCD2912 < ID3012; OD3512 vs shell OD 2812) - could not confirm geometry.",
+  "Nozzle P (3in) appears in load table, plan view and shell layout but not in the nozzle list and has no detail sheet.",
+  "L1/L2 are 3in in list/details but connected pipe 2in SCH40 in load table (DN50).",
+  "Nozzle projections / elevations: dimension chain on sheet 1 does not close; detail sheets give figures ('1660 TO TL', '950 TO CL', '1560 TO CL') whose reference lines are ambiguous - not extracted.",
+  "Drawn/checked/approved initials; revision table blank; scale '-'.",
+  "Customer drawing: design-pressure/temperature digits, parts-list rows 101-109, SS41 vs SF41 handwriting, sizes of D/E/L nozzles in table are low-contrast.",
+  "'Stub end' is not named on as-built; inferred from LJF + COLLARING + Gr.7 lining. Loose-flange standard/material is SS400 not A105.",
+  "No nozzle schedule schedule/sch column on as-built; sch only in part lists for small pipe necks."
+ ]
+}
