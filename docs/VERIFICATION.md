@@ -82,3 +82,12 @@ page-2 table header. They do not appear on paper.
   cannot recognise in import notes rather than guessing.
 - Per-part dimensions in the CES sheet are blank in the reference workbook (material is priced per piece from supplier
   sheets), so per-part weight costing could not be compared with a Prolog reference.
+
+## 5. User interface (Playwright, production build served by FastAPI)
+
+Verified in Chromium: dashboard; seeded project shows items 55,240 / 21,560 / 68,820 / 1,000 and net 131,958;
+calculation-trace drawer (formula + substituted numbers down to supplier lines); live recalculation when a supplier
+price is edited; issue blocked (409) with the missing input listed and clickable to the field; quotation PDF preview;
+drawing upload, page rendering, zoom/pan, bbox highlight of extracted rows, accept/edit/reject review and
+"add accepted parts to BOM"; revisions issue/compare; actuals; supplier CRUD; workbook import with checks; factory
+settings save. AI result screens were exercised with seeded/stubbed results only (no API key in this environment).
