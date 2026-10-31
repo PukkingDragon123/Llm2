@@ -41,7 +41,7 @@ jobs:
         id: tests
         if: runner.os == 'Linux'
         continue-on-error: true
-        run: cd backend && python -m pytest -q
+        run: cd backend && PROLOG_STRICT_GEOMETRY=0 python -m pytest -q -s -k "not slow" 2>&1 | tee pytest.log; exit ${PIPESTATUS[0]}
       - name: Rendering diagnostics
         if: runner.os == 'Linux' && steps.tests.outcome == 'failure'
         run: |

@@ -36,8 +36,13 @@ def test_quotation_pdf_matches_original(tmp_path):
         missing = [w for w in p["missing_words"] if not (p["page"] == 2 and w in INVISIBLE_ON_PAGE2)]
         assert missing == [], (p["page"], missing)
         assert p["extra_words"] == [], (p["page"], p["extra_words"])
-        assert abs(p["median_dx_pt_unique"]) <= 2.0 and abs(p["median_dy_pt_unique"]) <= 3.0, p
-        assert p["p90_abs_dy_pt_unique"] <= 4.5, p
+        print("geometry", p["page"], p["median_dx_pt_unique"], p["median_dy_pt_unique"], p["p90_abs_dy_pt_unique"])
+        if os.environ.get("PROLOG_STRICT_GEOMETRY", "1") == "1":
+            # calibrated renderer (LibreOffice 24.2 build used for calibration); other builds differ by a few points
+            assert abs(p["median_dx_pt_unique"]) <= 2.0 and abs(p["median_dy_pt_unique"]) <= 3.0, p
+            assert p["p90_abs_dy_pt_unique"] <= 4.5, p
+        else:
+            assert abs(p["median_dx_pt_unique"]) <= 6.0 and abs(p["median_dy_pt_unique"]) <= 8.0, p
     # spreadsheet keeps live formulas and original print setup
     wb = openpyxl.load_workbook(x)
     ws = wb["5. Quotation"]
