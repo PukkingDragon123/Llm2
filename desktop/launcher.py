@@ -31,6 +31,16 @@ def data_dir() -> str:
     return os.path.join(root, "PrologTitaniumEstimator")
 
 
+def configure_streams():
+    """Windowed builds have no console (sys.stdout/stderr are None): send output to a log file instead."""
+    if sys.stdout is None or sys.stderr is None:
+        d = data_dir()
+        os.makedirs(d, exist_ok=True)
+        f = open(os.path.join(d, "app.log"), "a", buffering=1, encoding="utf-8")
+        sys.stdout = sys.stdout or f
+        sys.stderr = sys.stderr or f
+
+
 def configure_env():
     b = base_dir()
     frozen = getattr(sys, "frozen", False)
@@ -55,12 +65,12 @@ def free_port() -> int:
 def start_server(port: int):
     import uvicorn
     from app.main import app
-    config = uvicorn.Config(app, host="127.0.0.1", port=port, log_level="warning")
+    config = uvicorn.Config(app, host="127.0.0.1", port=port, log_level="warning", log_config=None)
     server = uvicorn.Server(config)
     t = threading.Thread(target=server.run, daemon=True)
     t.start()
     url = f"http://127.0.0.1:{port}"
-    for _ in range(300):
+    for _ in range(150):
         try:
             with urllib.request.urlopen(url + "/api/health", timeout=1) as r:
                 if r.status == 200:
@@ -71,6 +81,7 @@ def start_server(port: int):
 
 
 def main():
+    configure_streams()
     configure_env()
     smoke = "--smoke-test" in sys.argv
     port = free_port()
@@ -86,7 +97,11 @@ def main():
         if h.get("soffice") or h.get("excel"):
             pdf = urllib.request.urlopen(url + f"/api/projects/{ps[0]['id']}/export/quotation.pdf", timeout=300).read()
             pdf_ok = pdf[:4] == b"%PDF"
-        print(json.dumps({"health": h, "ui": b"<div id=\"root\"" in html, "projects": len(ps), "net": net, "pdf": pdf_ok}))
+        result = json.dumps({"health": h, "ui": b"<div id=\"root\"" in html, "projects": len(ps), "net": net, "pdf": pdf_ok})
+        print(result)
+        out = os.environ.get("PROLOG_SMOKE_OUT")
+        if out:
+            open(out, "w").write(result)
         ok = h["ok"] and b"root" in html and abs(net - 131958) < 0.005 and pdf_ok is not False
         server.should_exit = True
         sys.exit(0 if ok else 1)

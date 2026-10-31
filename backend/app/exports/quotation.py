@@ -12,6 +12,7 @@ import math
 import os
 import shutil
 import subprocess
+import sys
 import tempfile
 from datetime import datetime, date
 
@@ -374,25 +375,56 @@ def build_quotation_workbook(doc: dict, result: dict, out_path: str) -> dict:
 FONTS_DIR = os.environ.get("PROLOG_FONTS_DIR") or os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "fonts"))
 
 
+BUNDLED_FONTS = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "..", "fonts", "bundled"))
+if not os.path.isdir(BUNDLED_FONTS):   # frozen desktop build: fonts/ sits next to app/
+    BUNDLED_FONTS = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "..", "fonts", "bundled"))
+
+
+def _font_dirs() -> list[str]:
+    dirs = []
+    for d in (FONTS_DIR, BUNDLED_FONTS, os.path.join(os.path.dirname(FONTS_DIR), "fonts", "bundled")):
+        if d and os.path.isdir(d) and d not in dirs:
+            dirs.append(d)
+    return dirs
+
+
 def _font_env(tmp: str) -> dict:
+    """Fontconfig setup (Linux/macOS LibreOffice): licensed fonts dropped in backend/fonts first, then bundled
+    open-licence metric-compatible substitutes, with explicit aliases so the layout never falls back to a wider font."""
     env = dict(os.environ, HOME=tmp)
-    if os.path.isdir(FONTS_DIR) and any(f.lower().endswith((".ttf", ".ttc", ".otf")) for f in os.listdir(FONTS_DIR)):
-        conf = os.path.join(tmp, "fonts.conf")
-        with open(conf, "w") as f:
-            f.write(f'<?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd"><fontconfig>'
-                    f'<include ignore_missing="yes">/etc/fonts/fonts.conf</include><dir>{FONTS_DIR}</dir>'
-                    f'<cachedir>{tmp}/fc-cache</cachedir></fontconfig>')
-        env["FONTCONFIG_FILE"] = conf
+    if sys.platform == "win32":
+        return env
+    conf = os.path.join(tmp, "fonts.conf")
+    alias = lambda fam, sub: (f"<alias binding=\"same\"><family>{fam}</family><accept><family>{sub}</family></accept></alias>")
+    with open(conf, "w") as f:
+        f.write('<?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd"><fontconfig>'
+                '<include ignore_missing="yes">/etc/fonts/fonts.conf</include>'
+                + "".join(f"<dir>{d}</dir>" for d in _font_dirs())
+                + alias("Cambria", "Caladea") + alias("Calibri", "Carlito") + alias("Angsana New", "Liberation Serif")
+                + f"<cachedir>{tmp}/fc-cache</cachedir></fontconfig>")
+    env["FONTCONFIG_FILE"] = conf
     return env
 
 
 def has_font(name: str) -> bool:
+    """True only if the REAL font is installed (aliases do not count)."""
+    if sys.platform == "win32":
+        files = {"angsana new": ("angsa.ttf", "angsana.ttc"), "cambria": ("cambria.ttc",)}.get(name.lower(), ())
+        fd = os.path.join(os.environ.get("WINDIR", r"C:\Windows"), "Fonts")
+        return any(os.path.exists(os.path.join(fd, f)) for f in files)
     try:
         out = subprocess.run(["fc-list", ":family"], capture_output=True, text=True, timeout=20,
                              env=_font_env(tempfile.mkdtemp(prefix="fc_"))).stdout
-        return name.lower() in out.lower()
+        return any(line.split(",")[0].strip().lower() == name.lower() for line in out.splitlines())
     except Exception:
         return False
+
+
+def soffice_cmd(tmp: str, *args: str) -> list[str]:
+    from ..platform_tools import require_soffice
+    from pathlib import Path
+    profile = Path(tmp, "lo_profile").as_uri()
+    return [require_soffice(), f"-env:UserInstallation={profile}", "--headless", "--norestore", *args]
 
 
 def xlsx_to_pdf(xlsx_path: str, out_dir: str, pdf_font_fix: bool = True) -> str:
@@ -423,7 +455,7 @@ def xlsx_to_pdf(xlsx_path: str, out_dir: str, pdf_font_fix: bool = True) -> str:
         else:
             shutil.copy(xlsx_path, src)
         env = _font_env(tmp)
-        subprocess.run([require_soffice(), "--headless", "--norestore", "--convert-to", "pdf", "--outdir", tmp, src],
+        subprocess.run(soffice_cmd(tmp, "--convert-to", "pdf", "--outdir", tmp, src),
                        check=True, capture_output=True, timeout=180, env=env)
         pdf = os.path.splitext(src)[0] + ".pdf"
         shutil.move(pdf, dst)

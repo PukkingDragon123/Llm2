@@ -31,7 +31,8 @@ def to_xlsx(path: str) -> tuple[str, str | None]:
     if excel_available():
         excel_convert(src, out)          # Excel evaluates XLOOKUP: cached values are complete
         return out, tmp
-    subprocess.run([require_soffice(), "--headless", "--convert-to", "xlsx", "--outdir", tmp, src],
+    from .exports.quotation import soffice_cmd
+    subprocess.run(soffice_cmd(tmp, "--convert-to", "xlsx", "--outdir", tmp, src),
                    check=True, capture_output=True, timeout=300, env=dict(os.environ, HOME=tmp))
     if not os.path.exists(out):
         raise RuntimeError("LibreOffice conversion failed")
