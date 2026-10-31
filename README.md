@@ -31,7 +31,8 @@ GitHub Release.
 - **Windows with Microsoft Excel installed:** quotation PDFs are printed by Excel itself with the installed Cambria /
   Angsana New fonts — the same renderer and fonts as Prolog's original quotation, so the output is identical to an
   Excel print. Excel is also used to import `.xls` workbooks (it evaluates XLOOKUP).
-- Without Excel, LibreOffice is needed for PDF/XLS conversion (https://www.libreoffice.org).
+- Without Excel, LibreOffice **24.2 or newer** is needed for PDF/XLS conversion (https://www.libreoffice.org).
+  Older LibreOffice versions (e.g. 7.3) lay out the quotation differently (extra page).
 - Claude: Settings → paste the Anthropic API key (console.anthropic.com → API Keys) → **Test connection**. If the key
   cannot use the default model, the app falls back to Claude Sonnet / Haiku automatically. Internet access to
   `api.anthropic.com` is required for AI features; all calculations and exports work offline.

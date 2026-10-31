@@ -84,9 +84,14 @@ def main():
     configure_streams()
     configure_env()
     smoke = "--smoke-test" in sys.argv
+    if smoke:
+        import faulthandler
+        faulthandler.dump_traceback_later(480, exit=True, file=sys.stderr)   # diagnose hangs in CI
+        print("smoke: starting server", flush=True)
     port = free_port()
     server, url = start_server(port)
-    if smoke:   # CI / installer check: server + UI + engine reachable, then exit
+    if smoke:
+        print("smoke: server up at", url, flush=True)   # CI / installer check: server + UI + engine reachable, then exit
         import json
         h = json.loads(urllib.request.urlopen(url + "/api/health").read())
         html = urllib.request.urlopen(url + "/").read()
@@ -94,7 +99,9 @@ def main():
         p = json.loads(urllib.request.urlopen(url + f"/api/projects/{ps[0]['id']}").read())
         net = p["result"]["totals"]["net"]
         pdf_ok = None
+        print("smoke: health/ui/project ok, net", net, flush=True)
         if h.get("soffice") or h.get("excel"):
+            print("smoke: exporting quotation PDF", flush=True)
             pdf = urllib.request.urlopen(url + f"/api/projects/{ps[0]['id']}/export/quotation.pdf", timeout=300).read()
             pdf_ok = pdf[:4] == b"%PDF"
         result = json.dumps({"health": h, "ui": b"<div id=\"root\"" in html, "projects": len(ps), "net": net, "pdf": pdf_ok})
@@ -104,7 +111,8 @@ def main():
             open(out, "w").write(result)
         ok = h["ok"] and b"root" in html and abs(net - 131958) < 0.005 and pdf_ok is not False
         server.should_exit = True
-        sys.exit(0 if ok else 1)
+        sys.stdout.flush()
+        os._exit(0 if ok else 1)   # hard exit: background server/LibreOffice threads must not alter the result
     if "--browser" not in sys.argv:
         try:
             import webview

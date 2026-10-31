@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-22.04]
+        os: [windows-latest, macos-latest, ubuntu-24.04]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 45
     env:
@@ -49,7 +49,7 @@ jobs:
           EXE=dist/PrologEstimator/PrologEstimator
           [ -f "$EXE.exe" ] && EXE="$EXE.exe"
           export PROLOG_DATA_DIR="$RUNNER_TEMP/smoke" PROLOG_SMOKE_OUT="$RUNNER_TEMP/smoke.json"
-          set +e; "$EXE" --smoke-test; code=$?; set -e
+          set +e; timeout 600 "$EXE" --smoke-test; code=$?; set -e
           cat "$RUNNER_TEMP/smoke.json" 2>/dev/null; echo; cat "$RUNNER_TEMP/smoke/app.log" 2>/dev/null | tail -50
           exit $code
       - name: Windows installer
