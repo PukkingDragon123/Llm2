@@ -583,6 +583,13 @@ def compute(estimate: dict) -> dict:
         if c.nodes[key].value and (t, "") not in used_sources:
             c.issue("warning", key, f"{c.nodes[key].label} is not assigned to any quote item")
 
+    sheet_lines = sum(len(sh.get("lines") or []) for sh in est.get("price_sheets") or [])
+    via_sheet = [p for p in est.get("parts") or [] if p.get("pricing", "price_sheet") == "price_sheet"]
+    if via_sheet and sheet_lines == 0:
+        c.issue("missing", "price_sheets", f"{len(via_sheet)} BOM parts are priced through supplier price sheets, "
+                "but no price-sheet lines exist", "Add the stock material (plates/pipes/flanges) to the supplier price "
+                "sheets with verified supplier prices, or set the parts to 'by_weight' with a THB/kg price")
+
     keys_items = [f"item.{it['no']}.total" for it in items]
     total = c.calc("totals.total", "Total price", sum(it["total"] for it in items), "SUM(item totals)",
                    " + ".join(fmt(it["total"]) for it in items) or "0", keys_items, qcur)

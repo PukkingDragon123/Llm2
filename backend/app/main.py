@@ -608,7 +608,13 @@ def suppliers(db: Session = Depends(get_db)):
 
 @app.post("/api/suppliers")
 def create_supplier(body: dict = Body(...), db: Session = Depends(get_db)):
-    s = Supplier(**{k: body.get(k, "") for k in ("name", "country", "contact", "lead_time", "notes")})
+    name = (body.get("name") or "").strip()
+    if not name:
+        raise HTTPException(400, "Supplier name is required")
+    if db.query(Supplier).filter(Supplier.name == name).first():
+        raise HTTPException(409, f"Supplier '{name}' already exists")
+    body["name"] = name
+    s = Supplier(**{k: body.get(k) or "" for k in ("name", "country", "contact", "lead_time", "notes")})
     db.add(s)
     db.commit()
     return {"id": s.id}
@@ -626,8 +632,45 @@ def update_supplier(sid: int, body: dict = Body(...), db: Session = Depends(get_
     return {"ok": True}
 
 
+@app.delete("/api/suppliers/{sid}")
+def delete_supplier(sid: int, db: Session = Depends(get_db)):
+    s = db.get(Supplier, sid)
+    if not s:
+        raise HTTPException(404)
+    db.query(SupplierPrice).filter_by(supplier_id=sid).update({"supplier_id": None})
+    db.delete(s)
+    db.commit()
+    return {"ok": True}
+
+
+@app.get("/api/projects/{pid}/drawings")
+def list_drawings(pid: int, db: Session = Depends(get_db)):
+    return [_ddict(d) for d in _project(db, pid).drawings]
+
+
 PRICE_FIELDS = ("supplier_id", "supplier_name", "category", "material", "description", "thk", "width", "length", "od", "unit",
                 "unit_price", "currency", "unit_weight", "quote_date", "valid_until", "source", "verified")
+
+
+_STR_PRICE_FIELDS = {"supplier_name", "category", "material", "description", "unit", "currency", "quote_date", "valid_until", "source"}
+_NUM_PRICE_FIELDS = {"thk", "width", "length", "od", "unit_weight", "unit_price"}
+
+
+def _clean_price_field(k, v):
+    if k in _STR_PRICE_FIELDS:
+        return "" if v is None else str(v)
+    if k in _NUM_PRICE_FIELDS:
+        if v in (None, ""):
+            return None
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            raise HTTPException(400, f"{k} must be a number")
+    if k == "verified":
+        return bool(v)
+    if k == "supplier_id":
+        return int(v) if v not in (None, "") else None
+    return v
 
 
 def _price(sp: SupplierPrice) -> dict:
@@ -661,7 +704,7 @@ def create_price(body: dict = Body(...), db: Session = Depends(get_db)):
     if body.get("supplier_id"):
         s = db.get(Supplier, int(body["supplier_id"]))
         body["supplier_name"] = s.name if s else body.get("supplier_name", "")
-    sp = SupplierPrice(**{k: body.get(k) for k in PRICE_FIELDS if k in body})
+    sp = SupplierPrice(**{k: _clean_price_field(k, body.get(k)) for k in PRICE_FIELDS if k in body})
     db.add(sp)
     db.commit()
     return _price(sp)
@@ -674,7 +717,9 @@ def update_price(prid: int, body: dict = Body(...), db: Session = Depends(get_db
         raise HTTPException(404)
     for k in PRICE_FIELDS:
         if k in body:
-            setattr(sp, k, body[k])
+            if k == "unit_price" and body[k] in (None, ""):
+                raise HTTPException(400, "unit_price is required")
+            setattr(sp, k, _clean_price_field(k, body[k]))
     db.commit()
     return _price(sp)
 

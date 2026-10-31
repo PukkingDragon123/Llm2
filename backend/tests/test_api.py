@@ -200,3 +200,13 @@ def test_actuals_calibration_and_learning(c):
     assert abs(s["suggested_pct"] - 0.1) < 1e-9 and s["item"] == 3
     sim = c.get(f"/api/projects/{other['id']}/similar").json()
     assert sim[0]["score"] > 0.5
+
+
+def test_supplier_and_price_validation(c):
+    assert c.post("/api/suppliers", json={"name": "Dup Co"}).status_code == 200
+    assert c.post("/api/suppliers", json={"name": "Dup Co"}).status_code == 409
+    pr = c.post("/api/prices", json={"supplier_name": "Dup Co", "unit_price": 10, "description": "x"}).json()
+    assert c.put(f"/api/prices/{pr['id']}", json={"valid_until": None, "thk": ""}).status_code == 200
+    assert c.put(f"/api/prices/{pr['id']}", json={"unit_price": ""}).status_code == 400
+    sid = [s for s in c.get("/api/suppliers").json() if s["name"] == "Dup Co"][0]["id"]
+    assert c.delete(f"/api/suppliers/{sid}").status_code == 200
