@@ -44,7 +44,7 @@ PAGE_BODY_CAPACITY_PT = None   # computed from template rows 18..50 (page 1 body
 PDF_SCALE_CALIBRATION = {"Disclaimers": 100}
 # footer: Angsana New 14 (not on Linux) -> Liberation Serif 9 (same printed width); LibreOffice places the
 # footer lower than Excel did, so the footer margin of the render copy is raised to the measured position.
-PDF_FOOTER_MARGIN_IN = {QS: (0.505, 0.544), DS: (0.385, 0.818)}   # (footer, bottom) in inches
+PDF_FOOTER_MARGIN_IN = {QS: (0.36, 0.40), DS: (0.385, 0.818)}  # QS keeps >1 row of slack on page 1   # (footer, bottom) in inches
 PDF_FOOTER_FONT = ("Liberation Serif,Regular", 9)
 ACC_FMT = '_-* #,##0.00_-;\\-* #,##0.00_-;_-* \\-??_-;_-@_-'
 

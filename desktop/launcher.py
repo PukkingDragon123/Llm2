@@ -8,6 +8,7 @@ import socket
 import sys
 import threading
 import time
+import urllib.error
 import urllib.request
 
 APP_NAME = "Prolog Titanium Estimator"
@@ -102,7 +103,11 @@ def main():
         print("smoke: health/ui/project ok, net", net, flush=True)
         if h.get("soffice") or h.get("excel"):
             print("smoke: exporting quotation PDF", flush=True)
-            pdf = urllib.request.urlopen(url + f"/api/projects/{ps[0]['id']}/export/quotation.pdf", timeout=300).read()
+            try:
+                pdf = urllib.request.urlopen(url + f"/api/projects/{ps[0]['id']}/export/quotation.pdf", timeout=300).read()
+            except urllib.error.HTTPError as e:
+                print("smoke: PDF export failed:", e.code, e.read()[:2000], flush=True)
+                pdf = b""
             pdf_ok = pdf[:4] == b"%PDF"
         result = json.dumps({"health": h, "ui": b"<div id=\"root\"" in html, "projects": len(ps), "net": net, "pdf": pdf_ok})
         print(result)
