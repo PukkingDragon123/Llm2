@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { IssueList, IssueRevisionModal } from '../components/IssueRevision'
 import { Badge, Spinner } from '../components/ui'
@@ -22,12 +22,12 @@ const TABS = [
   { id: 'overview', label: 'Overview', C: OverviewTab },
   { id: 'drawings', label: 'Drawings', C: DrawingsTab },
   { id: 'bom', label: 'BOM / Parts', C: BomTab },
-  { id: 'prices', label: 'Material prices', C: PricesTab },
+  { id: 'prices', label: 'Prices', C: PricesTab },
   { id: 'labor', label: 'Labor', C: LaborTab },
   { id: 'machines', label: 'Machines', C: MachinesTab },
   { id: 'services', label: 'Services', C: ServicesTab },
-  { id: 'pricing', label: 'Quote items & pricing', C: PricingTab },
-  { id: 'quotation', label: 'Quotation document', C: QuotationTab },
+  { id: 'pricing', label: 'Items & pricing', C: PricingTab },
+  { id: 'quotation', label: 'Quotation', C: QuotationTab },
   { id: 'preview', label: 'Preview & export', C: PreviewTab },
   { id: 'revisions', label: 'Revisions', C: RevisionsTab },
   { id: 'ai', label: 'AI assistant', C: AiTab },
@@ -51,11 +51,22 @@ function WorkspaceInner({ tab }: { tab: string }) {
   const [showIssues, setShowIssues] = useState(false)
   const [issueDlg, setIssueDlg] = useState(false)
   const Active = TABS.find((t) => t.id === tab)!.C
+  const stick = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const el = stick.current
+    if (!el) return
+    const set = () => el.parentElement?.style.setProperty('--stick', `${el.offsetHeight}px`)
+    const ro = new ResizeObserver(set)
+    ro.observe(el)
+    set()
+    return () => ro.disconnect()
+  }, [])
   const f = ed.fields
   const open = ed.issues.filter((i) => i.severity === 'missing' || i.severity === 'error')
   const warn = ed.issues.filter((i) => i.severity === 'warning' || i.severity === 'info')
   return (
     <div className="ws">
+      <div className="ws-sticky" ref={stick}>
       <header className="ws-head">
         <div className="ws-title">
           <Link to="/projects" className="crumb">Projects</Link>
@@ -89,6 +100,7 @@ function WorkspaceInner({ tab }: { tab: string }) {
           </Link>
         ))}
       </nav>
+      </div>
       <div className="ws-body">
         <div className="ws-content" data-tab-content={tab}>
           <Active />

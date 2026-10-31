@@ -53,3 +53,6 @@ export function tabForPath(path: string): string {
       return 'overview'
   }
 }
+
+/** View a typed object as a string-keyed record (for generic cell editing). */
+export const R = (o: object) => o as Record<string, unknown>

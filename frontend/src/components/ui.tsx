@@ -211,3 +211,16 @@ export function Tabs<T extends string>({ tabs, value, onChange }: { tabs: { id: 
     </div>
   )
 }
+
+export function Sums({ items }: { items: { label: ReactNode; value: ReactNode; grand?: boolean }[] }) {
+  return (
+    <div className="sums">
+      {items.map((it, i) => (
+        <div key={i} className={`sum${it.grand ? ' grand' : ''}`}>
+          <span className="sum-label">{it.label}</span>
+          <span className="sum-val">{it.value}</span>
+        </div>
+      ))}
+    </div>
+  )
+}

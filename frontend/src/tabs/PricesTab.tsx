@@ -4,7 +4,7 @@ import { Calc, NumIn, SelIn, TextIn } from '../components/fields'
 import { DataTable } from '../components/DataTable'
 import type { Col } from '../components/DataTable'
 import { PricePicker } from '../components/PricePicker'
-import { Badge, Card, Field } from '../components/ui'
+import { Badge, Card, Field, Sums } from '../components/ui'
 import { useEditor } from '../editor'
 import { slug } from '../lib/format'
 import { moveItem } from '../lib/path'
@@ -57,14 +57,18 @@ function SheetCard({ si, onPick }: { si: number; onPick: (li: number) => void })
   const setSheet = (k: string, v: unknown) => edit((e) => { (e.price_sheets[si] as unknown as Record<string, unknown>)[k] = v })
 
   const cols: Col<PriceLine>[] = [
-    { key: 'group', label: 'Group', w: 110 },
-    { key: 'material', label: 'Material', w: 100 },
-    { key: 'description', label: 'Description / size', w: 220 },
+    { key: 'group', label: 'Group', w: 96 },
+    { key: 'material', label: 'Material', w: 84 },
+    { key: 'description', label: 'Description / size', w: 190 },
     { key: 'qty', label: 'Qty', kind: 'num', w: 60 },
     { key: 'unit_price', label: `Supplier unit price (${cur})`, kind: 'num', w: 110 },
     { key: 'unit_weight', label: 'Unit wt kg', kind: 'num', w: 80 },
+    { key: 'cost', label: 'Cost', kind: 'calc', calc: (_l, li) => ({ v: rs?.lines[li]?.cost }) },
+    { key: 'alloc', label: 'Allocated', kind: 'calc', calc: (_l, li) => ({ v: rs?.lines[li]?.allocated }) },
+    { key: 'R', label: 'Selling unit', kind: 'calc', calc: (_l, li) => ({ k: `ps.${sid}.l${li}.R`, v: rs?.lines[li]?.selling_unit }) },
+    { key: 'S', label: `Amount (${cur})`, kind: 'calc', calc: (_l, li) => ({ k: `ps.${sid}.l${li}.S`, v: rs?.lines[li]?.amount, strong: true }) },
     {
-      key: 'price_source', label: 'Price source', w: 190,
+      key: 'price_source', label: 'Price source', w: 160,
       kind: 'node', noPath: true,
       node: (l, li) => (
         <span className="src-cell">
@@ -73,11 +77,7 @@ function SheetCard({ si, onPick }: { si: number; onPick: (li: number) => void })
         </span>
       ),
     },
-    { key: 'pick', label: '', kind: 'node', noPath: true, node: (_l, li) => <button className="btn sm" onClick={() => onPick(li)} data-testid="pick-price">Pick verified price</button> },
-    { key: 'cost', label: 'Cost', kind: 'calc', calc: (_l, li) => ({ v: rs?.lines[li]?.cost }) },
-    { key: 'alloc', label: 'Allocated (incl. freight)', kind: 'calc', calc: (_l, li) => ({ v: rs?.lines[li]?.allocated }) },
-    { key: 'R', label: 'Selling unit', kind: 'calc', calc: (_l, li) => ({ k: `ps.${sid}.l${li}.R`, v: rs?.lines[li]?.selling_unit }) },
-    { key: 'S', label: `Amount (${cur})`, kind: 'calc', calc: (_l, li) => ({ k: `ps.${sid}.l${li}.S`, v: rs?.lines[li]?.amount, strong: true }) },
+    { key: 'pick', label: '', kind: 'node', noPath: true, node: (_l, li) => <button className="btn sm" onClick={() => onPick(li)} data-testid="pick-price" title="Pick a verified supplier price">Pick price…</button> },
   ]
 
   return (
@@ -106,19 +106,19 @@ function SheetCard({ si, onPick }: { si: number; onPick: (li: number) => void })
         path={`price_sheets.${si}.lines`}
         rows={sh.lines}
         cols={cols}
-        onCell={(li, k, v) => edit((e) => { (e.price_sheets[si].lines[li] as unknown as Record<string, unknown>)[k] = v; if (k === 'unit_price') e.price_sheets[si].lines[li].supplier_price_id = e.price_sheets[si].lines[li].supplier_price_id ?? null })}
+        onCell={(li, k, v) => edit((e) => { (e.price_sheets[si].lines[li] as unknown as Record<string, unknown>)[k] = v })}
         onAdd={() => edit((e) => { e.price_sheets[si].lines.push({ id: `r${Date.now().toString(36).slice(-4)}`, group: '', material: '', description: '', qty: null, unit_price: null, unit_weight: null, price_source: '', supplier_price_id: null }) })}
         addLabel="Add line"
         onDelete={(li) => edit((e) => { e.price_sheets[si].lines.splice(li, 1) })}
         onDuplicate={(li) => edit((e) => { const c = structuredClone(e.price_sheets[si].lines[li]); c.supplier_price_id = null; e.price_sheets[si].lines.splice(li + 1, 0, c) })}
         onMove={(li, d) => edit((e) => { e.price_sheets[si].lines = moveItem(e.price_sheets[si].lines, li, li + d) })}
-        footer={
-          <>
-            <tr className="tot"><td colSpan={12} className="r">Material cost (÷ margin divisor)</td><td className="r"><Calc k={`ps.${sid}.N`} v={rs?.material_cost} /></td><td /></tr>
-            <tr className="tot"><td colSpan={12} className="r">Freight total ({cur})</td><td className="r"><Calc v={rs?.freight_total} /></td><td /></tr>
-            <tr className="tot"><td colSpan={12} className="r">Material + freight</td><td className="r"><Calc k={`ps.${sid}.grand`} v={rs?.grand} /></td><td /></tr>
-            <tr className="tot grand"><td colSpan={12} className="r">Sheet total (sum of selling amounts)</td><td className="r"><Calc k={`ps.${sid}.total`} v={rs?.total} strong /></td><td /></tr>
-          </>
+        toolbar={
+          <Sums items={[
+            { label: 'Material cost (÷ margin divisor)', value: <Calc k={`ps.${sid}.N`} v={rs?.material_cost} /> },
+            { label: `Freight (${cur})`, value: <Calc v={rs?.freight_total} /> },
+            { label: 'Material + freight', value: <Calc k={`ps.${sid}.grand`} v={rs?.grand} /> },
+            { label: 'Sheet total', value: <Calc k={`ps.${sid}.total`} v={rs?.total} strong unit={cur} />, grand: true },
+          ]} />
         }
       />
 

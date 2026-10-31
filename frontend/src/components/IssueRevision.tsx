@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ApiError, api } from '../api/client'
-import type { Issue } from '../api/types'
 import { useEditor } from '../editor'
 import { ErrorBox, Modal, Spinner, useToast } from './ui'
 
-export function IssueList({ issues, onPick }: { issues: Pick<Issue, 'severity' | 'path' | 'message' | 'question'>[]; onPick?: (path: string) => void }) {
+export function IssueList({ issues, onPick }: { issues: { severity: string; path: string; message: string; question: string }[]; onPick?: (path: string) => void }) {
   return (
     <ul className="issue-list">
       {issues.map((i, n) => (

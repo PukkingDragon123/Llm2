@@ -1,7 +1,7 @@
 // Project editor state: estimate + quote document drafts, live recalculation, save, issues, trace drawer, focus-by-path.
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { UNSAFE_NavigationContext, useLocation, useNavigate } from 'react-router-dom'
 import { api, errMsg } from './api/client'
 import type { CalcResult, Estimate, Issue, ProjectFull, QuoteDoc, TraceNode } from './api/types'
 import { IssueCtx } from './components/fields'
@@ -135,6 +135,38 @@ export function ProjectEditorProvider({ id, children }: { id: number; children: 
     return () => window.removeEventListener('beforeunload', h)
   }, [dirty])
 
+  // Ctrl/Cmd+S saves
+  const saveRef = useRef<() => Promise<boolean>>(async () => false)
+  useEffect(() => {
+    const h = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+        e.preventDefault()
+        void saveRef.current()
+      }
+    }
+    window.addEventListener('keydown', h)
+    return () => window.removeEventListener('keydown', h)
+  }, [])
+
+  // Leaving the project (sidebar, links) with unsaved edits asks for confirmation; moving between its tabs does not.
+  const { navigator } = useContext(UNSAFE_NavigationContext)
+  useEffect(() => {
+    if (!dirty) return
+    const nav = navigator as unknown as { push: (...a: unknown[]) => void; replace: (...a: unknown[]) => void }
+    const { push, replace } = nav
+    const guard = (orig: (...a: unknown[]) => void) => (...a: unknown[]) => {
+      const to = a[0] as string | { pathname?: string }
+      const path = typeof to === 'string' ? to : to.pathname || ''
+      if (path.startsWith(`/projects/${id}`) || window.confirm('This project has unsaved changes that will be lost. Leave without saving?')) orig(...a)
+    }
+    nav.push = guard(push.bind(navigator))
+    nav.replace = guard(replace.bind(navigator))
+    return () => {
+      nav.push = push
+      nav.replace = replace
+    }
+  }, [dirty, navigator, id])
+
   const edit = useCallback((fn: (e: Estimate) => void) => {
     setEst((prev) => {
       if (!prev) return prev
@@ -175,6 +207,10 @@ export function ProjectEditorProvider({ id, children }: { id: number; children: 
       setSaving(false)
     }
   }, [est, qd, fields, id, toast])
+
+  useEffect(() => {
+    saveRef.current = save
+  }, [save])
 
   const reload = useCallback(
     async (force = false) => {
@@ -227,7 +263,9 @@ export function ProjectEditorProvider({ id, children }: { id: number; children: 
 
   // flash the target field after navigation
   const nodesRef = useRef<CalcResult['nodes']>({})
-  nodesRef.current = result?.nodes || {}
+  useEffect(() => {
+    nodesRef.current = result?.nodes || {}
+  }, [result])
   useEffect(() => {
     const fp = new URLSearchParams(location.search).get('focus')
     if (!fp) return
@@ -336,7 +374,7 @@ function TraceDrawer({ k, est, result, onClose, onNav }: { k: string; est: Estim
 }
 
 function TraceBranch({ n, depth, onFocus }: { n: TraceNode; depth: number; onFocus: (k: string) => void }) {
-  const [open, setOpen] = useState(depth < 2)
+  const [open, setOpen] = useState(depth < 3)
   const has = n.children.length > 0
   const isInput = n.kind === 'input' || n.kind === 'setting'
   return (

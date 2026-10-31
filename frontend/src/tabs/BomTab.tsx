@@ -3,7 +3,7 @@ import type { Part } from '../api/types'
 import { Calc, NumIn, SelIn } from '../components/fields'
 import { DataTable } from '../components/DataTable'
 import type { Col } from '../components/DataTable'
-import { Card } from '../components/ui'
+import { Card, Sums } from '../components/ui'
 import { useEditor } from '../editor'
 import { fmt, uid } from '../lib/format'
 import { moveItem } from '../lib/path'
@@ -37,14 +37,17 @@ export function BomTab() {
     { key: 'name', label: 'Part name', w: 170, placeholder: 'e.g. Shell' },
     { key: 'group', label: 'Group', w: 110 },
     { key: 'grade_code', label: 'Material grade', kind: 'sel', opts: matOpts, w: 170 },
-    { key: 'shape', label: 'Shape', kind: 'sel', opts: SHAPES, w: 110 },
+    { key: 'shape', label: 'Shape', kind: 'sel', opts: SHAPES, w: 110, placeholder: (p) => { const m = est.materials.find((x) => x.code === p.grade_code); return m?.shape ? `auto: ${m.shape}` : '—' } },
     { key: 's1', label: 'Size 1', kind: 'num', w: 72, placeholder: (p) => labels(p)[0] },
     { key: 's2', label: 'Size 2', kind: 'num', w: 72, placeholder: (p) => labels(p)[1] },
     { key: 's3', label: 'Size 3', kind: 'num', w: 72, placeholder: (p) => labels(p)[2], disabled: (p) => (p.shape || est.materials.find((m) => m.code === p.grade_code)?.shape) === 'DiaL' },
     { key: 'qty', label: 'Qty/set', kind: 'num', w: 64 },
+    { key: 'w', label: 'Weight kg/pc', kind: 'calc', calc: (p, i) => ({ k: `part.${p.id || i}.weight`, v: result.parts[i]?.weight, dp: 3 }) },
+    { key: 'tw', label: 'Total kg', kind: 'calc', calc: (_p, i) => ({ v: result.parts[i]?.total_weight, dp: 2 }) },
     { key: 'pricing', label: 'Pricing', kind: 'sel', opts: [{ value: 'price_sheet', label: 'price sheet' }, { value: 'by_weight', label: 'by weight' }], w: 100 },
     { key: 'unit_price_thb_kg', label: 'THB/kg', kind: 'num', w: 80, disabled: (p) => p.pricing !== 'by_weight', title: 'Unit price THB/kg (only for by-weight pricing; blank = material list price)' },
     { key: 'discount_pct', label: 'Disc %', kind: 'num', w: 62, disabled: (p) => p.pricing !== 'by_weight' },
+    { key: 'mat', label: 'Material THB', kind: 'calc', calc: (p, i) => ({ k: `part.${p.id || i}.mat`, v: result.parts[i]?.material_cost_thb }) },
     {
       key: 'processes', label: 'Processes (machine · h)', w: 190, kind: 'node', noPath: true,
       node: (p, i) => {
@@ -57,11 +60,8 @@ export function BomTab() {
       },
     },
     { key: 'machine_multiplier', label: 'Mach ×', kind: 'num', w: 60 },
-    { key: 'remark', label: 'Remark', w: 130 },
-    { key: 'w', label: 'Weight kg/pc', kind: 'calc', calc: (p, i) => ({ k: `part.${p.id || i}.weight`, v: result.parts[i]?.weight, dp: 3 }) },
-    { key: 'tw', label: 'Total kg', kind: 'calc', calc: (_p, i) => ({ v: result.parts[i]?.total_weight, dp: 2 }) },
-    { key: 'mat', label: 'Material THB', kind: 'calc', calc: (p, i) => ({ k: `part.${p.id || i}.mat`, v: result.parts[i]?.material_cost_thb }) },
     { key: 'mach', label: 'Machine THB', kind: 'calc', calc: (p, i) => ({ k: `part.${p.id || i}.mach`, v: result.parts[i]?.machine_cost_thb }) },
+    { key: 'remark', label: 'Remark', w: 130 },
   ]
 
   function onCell(i: number, key: string, value: unknown) {
@@ -101,16 +101,11 @@ export function BomTab() {
           renderExpanded={(p, i) => (
             <ProcessEditor i={i} part={p} machOpts={machOpts} />
           )}
-          footer={
-            <tr className="tot">
-              <td colSpan={15} className="r">Totals</td>
-              <td />
-              <td className="r num">{fmt(totals.w)} kg</td>
-              <td className="r num">{fmt(totals.m)}</td>
-              <td className="r num">{fmt(totals.c)}</td>
-              <td />
-            </tr>
-          }
+          toolbar={<Sums items={[
+            { label: 'Total weight', value: <span className="num">{fmt(totals.w)} kg</span> },
+            { label: 'Material (by weight) THB', value: <span className="num">{fmt(totals.m)}</span> },
+            { label: 'Machine THB', value: <span className="num">{fmt(totals.c)}</span>, grand: true },
+          ]} />}
         />
       </Card>
     </div>
