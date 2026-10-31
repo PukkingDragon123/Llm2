@@ -108,7 +108,7 @@ def main():
         print(result)
         out = os.environ.get("PROLOG_SMOKE_OUT")
         if out:
-            open(out, "w").write(result)
+            open(out, "w", encoding="utf-8").write(result)
         ok = h["ok"] and b"root" in html and abs(net - 131958) < 0.005 and pdf_ok is not False
         server.should_exit = True
         sys.stdout.flush()
@@ -132,5 +132,27 @@ def main():
         server.should_exit = True
 
 
+def run():
+    try:
+        main()
+    except SystemExit:
+        raise
+    except BaseException:
+        import traceback
+        traceback.print_exc()
+        if "--smoke-test" in sys.argv:
+            sys.stderr.flush()
+            os._exit(1)        # never block on the windowed error dialog in CI
+        try:                   # show a readable error instead of a crash dialog
+            import webview
+            webview.create_window(APP_NAME, html="<h2>Prolog Titanium Estimator could not start</h2><pre>"
+                                  + traceback.format_exc().replace("<", "&lt;") + "</pre><p>Log: "
+                                  + os.path.join(data_dir(), "app.log") + "</p>")
+            webview.start()
+        except Exception:
+            pass
+        os._exit(1)
+
+
 if __name__ == "__main__":
-    main()
+    run()

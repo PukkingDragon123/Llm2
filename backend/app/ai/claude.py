@@ -29,7 +29,7 @@ class AIUnavailable(RuntimeError):
 
 def _config() -> dict:
     try:
-        return json.load(open(CONFIG_PATH))
+        return json.load(open(CONFIG_PATH, encoding="utf-8"))
     except Exception:
         return {}
 
@@ -40,7 +40,7 @@ def save_config(api_key: str | None = None, model: str | None = None):
         cfg["api_key"] = api_key.strip()
     if model:
         cfg["model"] = model.strip()
-    with open(CONFIG_PATH, "w") as f:
+    with open(CONFIG_PATH, "w", encoding="utf-8") as f:
         json.dump(cfg, f)
     os.chmod(CONFIG_PATH, 0o600)
 

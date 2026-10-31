@@ -28,7 +28,7 @@ from openpyxl.worksheet.pagebreak import Break, RowBreak
 
 TPL_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "templates"))
 TEMPLATE = os.path.join(TPL_DIR, "quotation_template.xlsx")
-META = json.load(open(os.path.join(TPL_DIR, "template_meta.json")))
+META = json.load(open(os.path.join(TPL_DIR, "template_meta.json"), encoding="utf-8"))
 QS, DS = "5. Quotation", "Disclaimers"
 NCOL = 25  # A..Y
 
@@ -396,7 +396,7 @@ def _font_env(tmp: str) -> dict:
         return env
     conf = os.path.join(tmp, "fonts.conf")
     alias = lambda fam, sub: (f"<alias binding=\"same\"><family>{fam}</family><accept><family>{sub}</family></accept></alias>")
-    with open(conf, "w") as f:
+    with open(conf, "w", encoding="utf-8") as f:
         f.write('<?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd"><fontconfig>'
                 '<include ignore_missing="yes">/etc/fonts/fonts.conf</include>'
                 + "".join(f"<dir>{d}</dir>" for d in _font_dirs())

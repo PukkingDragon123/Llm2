@@ -77,7 +77,7 @@ def seed(db: Session):
     """First start: load the reference project (imported from Prolog's workbook) and derive factory defaults."""
     if db.get(Setting, "factory") is not None:
         return
-    d = json.load(open(SEED))
+    d = json.load(open(SEED, encoding="utf-8"))
     set_factory(db, factory_from_import(d["estimate"], d["quote_doc"]))
     create_project_from_import(db, d, status="quoted")
 
