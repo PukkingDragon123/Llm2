@@ -4190,11 +4190,11 @@
  "reference_values": {
   "item.1.price": 55240.0,
   "item.2.price": 21560.0,
-  "item.3.price": null,
+  "item.3.price": 68820.0,
   "item.4.price": 1000.0,
-  "totals.total": null,
-  "totals.net": null,
-  "header.price": null,
+  "totals.total": 146620.0,
+  "totals.net": 131958.0,
+  "header.price": 135510.0,
   "ps.import.total": 35710.0,
   "ps.import_wfn.total": 2633.0,
   "ps.domestic.total": 340460.0,
@@ -4220,7 +4220,9 @@
   "machine:20 CNC Plasma Welding": 2237.0,
   "machine:21 TIG Welding Machine": 286.0,
   "machine:22 CNC Swiss type": 516.0,
-  "crews.total_thb": 764303.4
+  "crews.total_thb": 764303.4,
+  "totals.discount": 14662.0,
+  "_source": "Excel cached values from the original .xls"
  },
  "supplier_prices": [
   {

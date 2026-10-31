@@ -124,3 +124,16 @@ def test_import_original_xls_end_to_end():
     r = compute(d["estimate"])
     assert [i["unit_price"] for i in r["items"]] == [55240, 21560, 68820, 1000]
     assert r["totals"]["header_price"] == 135510
+
+
+def test_recomputation_equals_excel_cached_values():
+    """reference_values were read from the values Excel itself cached in the original .xls."""
+    r = compute(FIX["estimate"])
+    ref = FIX["reference_values"]
+    assert ref.get("_source", "").startswith("Excel cached")
+    checked = 0
+    for k, v in ref.items():
+        if k in r["nodes"] and v is not None:
+            assert abs(r["nodes"][k]["value"] - v) < 0.005, (k, r["nodes"][k]["value"], v)
+            checked += 1
+    assert checked >= 10

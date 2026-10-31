@@ -276,7 +276,7 @@ async def import_workbook_ep(file: UploadFile = File(...), status: str = Form("q
                                    "match": abs(node["value"] - ref[k]) < 0.005})
                 elif node:
                     checks.append({"key": k, "label": label, "workbook": None, "recomputed": node["value"], "match": None,
-                                   "note": "workbook value not cached (formula error in source file)"})
+                                   "note": "value not available in the workbook file"})
             p.meta = {**p.meta, "import_checks": checks}
             db.commit()
             return {"project_id": p.id, "notes": data["notes"], "checks": checks}

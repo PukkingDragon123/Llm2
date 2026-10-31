@@ -110,7 +110,10 @@ def _parse_freight_formula(formula: str | None, cached) -> list[dict]:
 def import_workbook(path: str) -> dict:
     xlsx, tmp = to_xlsx(path)
     try:
-        return _import(xlsx, os.path.basename(path))
+        d = _import(xlsx, os.path.basename(path))
+        if path.lower().endswith(".xls"):
+            _excel_cached_reference(path, d)
+        return d
     finally:
         if tmp:
             shutil.rmtree(tmp, ignore_errors=True)
@@ -541,3 +544,45 @@ def _import(xlsx: str, filename: str) -> dict:
                                     "quote_date": settings.get("fx_date") or ""})
     return {"project": project, "estimate": estimate, "quote_doc": quote_doc, "reference_values": reference,
             "supplier_prices": supplier_prices, "notes": notes}
+
+
+def _excel_cached_reference(xls_path: str, d: dict):
+    """Use the values Excel itself cached in the .xls (LibreOffice cannot evaluate XLOOKUP, so the converted
+    workbook has #VALUE! where Excel had numbers)."""
+    import xlrd
+    try:
+        q = xlrd.open_workbook(xls_path).sheet_by_name("5. Quotation")
+    except Exception:
+        return
+
+    def val(coord):
+        col = column_index(coord.rstrip("0123456789")) - 1
+        row = int(coord[len(coord.rstrip("0123456789")):]) - 1
+        try:
+            v = q.cell_value(row, col)
+        except IndexError:
+            return None
+        return float(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else None
+
+    ref = d["reference_values"]
+    for r in range(18, 73):
+        no = val(f"A{r}")
+        if no is not None and float(no).is_integer():
+            ref[f"item.{int(no)}.price"] = val(f"P{r}")
+    ref["header.price"] = val("P18")
+    for r in range(60, 120):
+        try:
+            label = str(q.cell_value(r - 1, 15))
+        except IndexError:
+            break
+        if label.startswith("Total Price"):
+            ref["totals.total"], ref["totals.discount"], ref["totals.net"] = val(f"V{r}"), val(f"V{r+1}"), val(f"V{r+2}")
+            break
+    ref["_source"] = "Excel cached values from the original .xls"
+
+
+def column_index(letters: str) -> int:
+    n = 0
+    for ch in letters:
+        n = n * 26 + (ord(ch.upper()) - 64)
+    return n
