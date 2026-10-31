@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+anthropic>=2.3.0
+pydantic>=2
+python-multipart
+openpyxl
+xlrd
+pymupdf
+pytest
+httpx
