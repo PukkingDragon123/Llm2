@@ -20,7 +20,23 @@ engine, and generates customer quotations from the original Excel sheets used as
 | Revisions | Issuing a quotation snapshots inputs, results and generated files and increments `REV.n`; revisions can be compared. Issuing is blocked while required inputs are missing. |
 | Suppliers | Supplier and price database (seeded from the imported workbook), price age warnings, linking verified prices to price-sheet lines. |
 
-## Run
+## Desktop app (download)
+
+Every push builds the desktop app on GitHub Actions (workflow **Desktop app**):
+Actions → latest run → *Artifacts* → `PrologEstimator-Windows` (contains `PrologEstimator-Setup-<ver>.exe` installer and a
+portable zip), `PrologEstimator-macOS`, `PrologEstimator-Linux`. Pushing a tag `v1.0.0` publishes the same files as a
+GitHub Release.
+
+- The app runs fully on the computer (local database in `%LOCALAPPDATA%\PrologTitaniumEstimator`), in its own window.
+- **Windows with Microsoft Excel installed:** quotation PDFs are printed by Excel itself with the installed Cambria /
+  Angsana New fonts — the same renderer and fonts as Prolog's original quotation, so the output is identical to an
+  Excel print. Excel is also used to import `.xls` workbooks (it evaluates XLOOKUP).
+- Without Excel, LibreOffice is needed for PDF/XLS conversion (https://www.libreoffice.org).
+- Claude: Settings → paste the Anthropic API key (console.anthropic.com → API Keys) → **Test connection**. If the key
+  cannot use the default model, the app falls back to Claude Sonnet / Haiku automatically. Internet access to
+  `api.anthropic.com` is required for AI features; all calculations and exports work offline.
+
+## Run from source
 
 Requirements: Python 3.11+, Node 20+, LibreOffice (`soffice`) and poppler (`pdftotext`, for tests).
 
